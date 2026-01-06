@@ -91,7 +91,21 @@ CREATE TABLE combo (
     gia_combo INT,
     hinh_anh VARCHAR(255)
 );
+<<<<<<< HEAD
 
+=======
+🔹 Chi tiết combo
+CREATE TABLE chi_tiet_combo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_combo INT,
+    id_san_pham INT,
+    so_luong INT DEFAULT 1,
+    FOREIGN KEY (id_combo) REFERENCES combo(id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_san_pham) REFERENCES san_pham(id)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+>>>>>>> ccc9261970c085b6561fb918290ca7e3f5df6914
 9️⃣ BẢNG TRẠNG THÁI ĐƠN HÀNG
 
 CREATE TABLE trang_thai (
