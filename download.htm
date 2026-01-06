@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="vi" class="" data-skin="light">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v20.9 (Yoast SEO v26.0) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL</title>
+	<meta name="description" content="Rất nhiều người muốn tìm hiểu thêm các thông tin liên quan về ngôn ngữ SQL là gì, nếu bạn cũng tương tự, cùng đọc tiếp bài viết này ngay nhé!" />
+	<link rel="canonical" href="https://teky.edu.vn/blog/ngon-ngu-sql/" />
+	<meta property="og:locale" content="vi_VN" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL" />
+	<meta property="og:description" content="Rất nhiều người muốn tìm hiểu thêm các thông tin liên quan về ngôn ngữ SQL là gì, nếu bạn cũng tương tự, cùng đọc tiếp bài viết này ngay nhé!" />
+	<meta property="og:url" content="https://teky.edu.vn/blog/ngon-ngu-sql/" />
+	<meta property="og:site_name" content="TEKY - Học viện sáng tạo công nghệ" />
+	<meta property="article:publisher" content="https://www.facebook.com/TekyAcademy" />
+	<meta property="article:published_time" content="2023-10-07T16:27:35+00:00" />
+	<meta property="article:modified_time" content="2023-10-20T02:29:16+00:00" />
+	<meta property="og:image" content="https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg" />
+	<meta property="og:image:width" content="650" />
+	<meta property="og:image:height" content="400" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Khánh Kim" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@SteamTeky" />
+	<meta name="twitter:site" content="@SteamTeky" />
+	<meta name="twitter:label1" content="Được viết bởi" />
+	<meta name="twitter:data1" content="Khánh Kim" />
+	<meta name="twitter:label2" content="Ước tính thời gian đọc" />
+	<meta name="twitter:data2" content="13 phút" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#article","isPartOf":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/"},"author":{"name":"Khánh Kim","@id":"https://teky.edu.vn/blog/#/schema/person/8f946d2123e4e2277107e392790a1bd6"},"headline":"Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL","datePublished":"2023-10-07T16:27:35+00:00","dateModified":"2023-10-20T02:29:16+00:00","mainEntityOfPage":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/"},"wordCount":2968,"commentCount":0,"publisher":{"@id":"https://teky.edu.vn/blog/#organization"},"image":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#primaryimage"},"thumbnailUrl":"https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg","articleSection":["IT - Lập trình"],"inLanguage":"vi","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://teky.edu.vn/blog/ngon-ngu-sql/#respond"]}]},{"@type":"WebPage","@id":"https://teky.edu.vn/blog/ngon-ngu-sql/","url":"https://teky.edu.vn/blog/ngon-ngu-sql/","name":"Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL","isPartOf":{"@id":"https://teky.edu.vn/blog/#website"},"primaryImageOfPage":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#primaryimage"},"image":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#primaryimage"},"thumbnailUrl":"https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg","datePublished":"2023-10-07T16:27:35+00:00","dateModified":"2023-10-20T02:29:16+00:00","description":"Rất nhiều người muốn tìm hiểu thêm các thông tin liên quan về ngôn ngữ SQL là gì, nếu bạn cũng tương tự, cùng đọc tiếp bài viết này ngay nhé!","breadcrumb":{"@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://teky.edu.vn/blog/ngon-ngu-sql/"]}]},{"@type":"ImageObject","inLanguage":"vi","@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#primaryimage","url":"https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg","contentUrl":"https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg","width":650,"height":400,"caption":"Chia sẻ về ngôn ngữ SQL cho bạn đọc"},{"@type":"BreadcrumbList","@id":"https://teky.edu.vn/blog/ngon-ngu-sql/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"IT - Lập trình","item":"https://teky.edu.vn/blog/lap-trinh/"},{"@type":"ListItem","position":2,"name":"Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL"}]},{"@type":"WebSite","@id":"https://teky.edu.vn/blog/#website","url":"https://teky.edu.vn/blog/","name":"TEKY - Học viện sáng tạo công nghệ","description":"Trẻ em cần học lập trình","publisher":{"@id":"https://teky.edu.vn/blog/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://teky.edu.vn/blog/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"vi"},{"@type":"Organization","@id":"https://teky.edu.vn/blog/#organization","name":"TEKY - Học viện sáng tạo công nghệ","url":"https://teky.edu.vn/blog/","logo":{"@type":"ImageObject","inLanguage":"vi","@id":"https://teky.edu.vn/blog/#/schema/logo/image/","url":"https://teky.edu.vn/blog/wp-content/uploads/2021/02/logo-teky.png","contentUrl":"https://teky.edu.vn/blog/wp-content/uploads/2021/02/logo-teky.png","width":495,"height":234,"caption":"TEKY - Học viện sáng tạo công nghệ"},"image":{"@id":"https://teky.edu.vn/blog/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/TekyAcademy","https://x.com/SteamTeky"]},{"@type":"Person","@id":"https://teky.edu.vn/blog/#/schema/person/8f946d2123e4e2277107e392790a1bd6","name":"Khánh Kim","image":{"@type":"ImageObject","inLanguage":"vi","@id":"https://teky.edu.vn/blog/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=96&d=mm&r=g","caption":"Khánh Kim"},"url":"https://teky.edu.vn/blog/author/kimkhanh/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//teky.edu.vn' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin TEKY - Học viện sáng tạo công nghệ &raquo;" href="https://teky.edu.vn/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TEKY - Học viện sáng tạo công nghệ &raquo; Dòng bình luận" href="https://teky.edu.vn/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TEKY - Học viện sáng tạo công nghệ &raquo; Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL Dòng bình luận" href="https://teky.edu.vn/blog/ngon-ngu-sql/feed/" />
+
+		<style type="text/css">
+			:root{
+			
+					--main-nav-background: #FFFFFF;
+					--main-nav-secondry-background: rgba(0,0,0,0.03);
+					--main-nav-primary-color: #0088ff;
+					--main-nav-contrast-primary-color: #FFFFFF;
+					--main-nav-text-color: #2c2f34;
+					--main-nav-secondry-text-color: rgba(0,0,0,0.5);
+					--main-nav-main-border-color: rgba(0,0,0,0.1);
+					--main-nav-secondry-border-color: rgba(0,0,0,0.08);
+				
+			}
+		</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/teky.edu.vn\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://teky.edu.vn/blog/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='kk-star-ratings-css' href='https://teky.edu.vn/blog/wp-content/plugins/kk-star-ratings/src/core/public/css/kk-star-ratings.min.css?ver=5.4.10.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.76' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul{counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul{counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='ez-toc-sticky-css' href='https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/assets/css/ez-toc-sticky.min.css?ver=2.0.76' type='text/css' media='all' />
+<style id='ez-toc-sticky-inline-css' type='text/css'>
+.ez-toc-sticky-fixed{position: fixed;top: 0;left: 0;z-index: 999999;width: auto;max-width: 100%;} .ez-toc-sticky-fixed .ez-toc-sidebar {position: relative;top: auto;width: auto;;box-shadow: 1px 1px 10px 3px rgb(0 0 0 / 20%);box-sizing: border-box;padding: 20px 30px;background: #fff;margin-left: 0 !important; height: 100vh; overflow-y: auto;overflow-x: hidden;} .ez-toc-sticky-fixed .ez-toc-sidebar #ez-toc-sticky-container { padding: 0px;border: none;margin-bottom: 0;margin-top: 65px;} #ez-toc-sticky-container a { color: #000;} .ez-toc-sticky-fixed .ez-toc-sidebar .ez-toc-sticky-title-container {border-bottom-color: #EEEEEE;background-color: #fff;padding:15px;border-bottom: 1px solid #e5e5e5;width: 100%;position: absolute;height: auto;top: 0;left: 0;z-index: 99999999;} .ez-toc-sticky-fixed .ez-toc-sidebar .ez-toc-sticky-title-container .ez-toc-sticky-title {font-weight: 600;font-size: 18px;color: #111;} .ez-toc-sticky-fixed .ez-toc-close-icon {-webkit-appearance: none;padding: 0;cursor: pointer;background: 0 0;border: 0;float: right;font-size: 30px;font-weight: 600;line-height: 1;position: relative;color: #111;top: -2px;text-decoration: none;} .ez-toc-open-icon {position: fixed;left: 0px;top:8%;text-decoration: none;font-weight: bold;padding: 5px 10px 15px 10px;box-shadow: 1px -5px 10px 5px rgb(0 0 0 / 10%);background-color: #fff;color:#111;display: inline-grid;line-height: 1.4;border-radius: 0px 10px 10px 0px;z-index: 999999;} .ez-toc-sticky-fixed.hide {-webkit-transition: opacity 0.3s linear, left 0.3s cubic-bezier(0.4, 0, 1, 1);-ms-transition: opacity 0.3s linear, left 0.3s cubic-bezier(0.4, 0, 1, 1);-o-transition: opacity 0.3s linear, left 0.3s cubic-bezier(0.4, 0, 1, 1);transition: opacity 0.3s linear, left 0.3s cubic-bezier(0.4, 0, 1, 1);left: -100%;} .ez-toc-sticky-fixed.show {-webkit-transition: left 0.3s linear, left 0.3s easy-out;-moz-transition: left 0.3s linear;-o-transition: left 0.3s linear;transition: left 0.3s linear;left: 0;} .ez-toc-open-icon span.arrow { font-size: 18px; } .ez-toc-open-icon span.text {font-size: 13px;writing-mode: vertical-rl;text-orientation: mixed;} @media screen  and (max-device-width: 640px) {.ez-toc-sticky-fixed .ez-toc-sidebar {min-width: auto;} .ez-toc-sticky-fixed .ez-toc-sidebar.show { padding-top: 35px; } .ez-toc-sticky-fixed .ez-toc-sidebar #ez-toc-sticky-container { min-width: 100%; } }
+.ez-toc-sticky-toggle-direction {direction: ltr;}.ez-toc-sticky-toggle-counter ul{counter-reset: item ;}.ez-toc-sticky-toggle-counter nav ul li a::before {content: counters(item, '.', decimal) '. ';display: inline-block;counter-increment: item;flex-grow: 0;flex-shrink: 0;margin-right: .2em; float: left; }
+</style>
+<link rel='stylesheet' id='tie-css-base-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/base.min.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-styles-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/style.min.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-widgets-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/widgets.min.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-helpers-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/helpers.min.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-fontawesome5-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/fontawesome.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-ilightbox-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-single-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/single.min.css?ver=6.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-print-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah/assets/css/print.css?ver=6.2.1' type='text/css' media='print' />
+<link rel='stylesheet' id='jannah-child-css-css' href='https://teky.edu.vn/blog/wp-content/themes/jannah-child/style.css?ver=6.8.3' type='text/css' media='all' />
+<style id='jannah-child-css-inline-css' type='text/css'>
+#top-nav a:not(:hover),#top-nav input,#top-nav #search-submit,#top-nav .fa-spinner,#top-nav .dropdown-social-icons li a span,#top-nav .components > li .social-link:not(:hover) span,#autocomplete-suggestions.search-in-top-nav a{color: #f1c40f;}#top-nav .menu-item-has-children > a:before{border-top-color: #f1c40f;}#top-nav li .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #f1c40f;}.rtl #top-nav .menu li .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #f1c40f;}#top-nav input::-moz-placeholder{color: #f1c40f;}#top-nav input:-moz-placeholder{color: #f1c40f;}#top-nav input:-ms-input-placeholder{color: #f1c40f;}#top-nav input::-webkit-input-placeholder{color: #f1c40f;}#top-nav,#top-nav .comp-sub-menu,#top-nav .tie-weather-widget{color: #f1c40f;}#autocomplete-suggestions.search-in-top-nav .post-meta,#autocomplete-suggestions.search-in-top-nav .post-meta a:not(:hover){color: rgba( 241,196,15,0.7 );}#top-nav .weather-icon .icon-cloud,#top-nav .weather-icon .icon-basecloud-bg,#top-nav .weather-icon .icon-cloud-behind{color: #f1c40f !important;}.main-nav {--main-nav-primary-color: #f1c40f;}#main-nav .mega-links-head:after,#main-nav .comp-sub-menu .button:hover,#main-nav .comp-sub-menu .checkout-button,#main-nav .cats-horizontal a.is-active,#main-nav .cats-horizontal a:hover,#autocomplete-suggestions.search-in-main-nav .button,#main-nav .spinner > div{background-color: #f1c40f;}#main-nav .menu ul li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,#main-nav .components a:hover,#main-nav .components > li:hover > a,#main-nav #search-submit:hover,#main-nav .cats-vertical a.is-active,#main-nav .cats-vertical a:hover,#main-nav .mega-menu .post-meta a:hover,#main-nav .mega-menu .post-box-title a:hover,#autocomplete-suggestions.search-in-main-nav a:hover,#main-nav .spinner-circle:after{color: #f1c40f;}#main-nav .menu > li.tie-current-menu > a,#main-nav .menu > li:hover > a,#main-nav .components .button:hover,#main-nav .comp-sub-menu .checkout-button,.theme-header #main-nav .mega-menu .cats-horizontal a.is-active,.theme-header #main-nav .mega-menu .cats-horizontal a:hover,#autocomplete-suggestions.search-in-main-nav a.button{color: #FFFFFF;}#main-nav .menu > li.tie-current-menu > a:before,#main-nav .menu > li:hover > a:before{border-top-color: #FFFFFF;}.main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.main-nav-light #main-nav .mega-menu li:hover > a:before{border-left-color: #f1c40f;}.rtl .main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.rtl .main-nav-light #main-nav .mega-menu li:hover > a:before{border-right-color: #f1c40f;border-left-color: transparent;}#autocomplete-suggestions.search-in-main-nav .button:hover,#main-nav .comp-sub-menu .checkout-button:hover{background-color: #d3a600;}#footer{background-color: #5dc2a7;}#footer .posts-list-counter .posts-list-items li.widget-post-list:before{border-color: #5dc2a7;}#footer .timeline-widget a .date:before{border-color: rgba(93,194,167,0.8);}#footer .footer-boxed-widget-area,#footer textarea,#footer input:not([type=submit]),#footer select,#footer code,#footer kbd,#footer pre,#footer samp,#footer .show-more-button,#footer .slider-links .tie-slider-nav span,#footer #wp-calendar,#footer #wp-calendar tbody td,#footer #wp-calendar thead th,#footer .widget.buddypress .item-options a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li.social-icons-item a,#footer .widget_tag_cloud .tagcloud a,#footer .latest-tweets-widget .slider-links .tie-slider-nav span,#footer .widget_layered_nav_filters a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li:before{background: rgba(255,255,255,0.1);}.site-footer #wp-calendar tbody td{background: rgba(255,255,255,0.02);}#footer .white-bg .social-icons-item a span.followers span,#footer .circle-three-cols .social-icons-item a .followers-num,#footer .circle-three-cols .social-icons-item a .followers-name{color: rgba(255,255,255,0.8);}#footer .timeline-widget ul:before,#footer .timeline-widget a:not(:hover) .date:before{background-color: #3fa489;}.post-cat{background-color:#f1c40f !important;color:#FFFFFF !important;}.meta-views.meta-item .tie-icon-fire:before{content: "\f06e" !important;}
+</style>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+<!-- Đoạn mã Google tag (gtag.js) được thêm bởi Site Kit -->
+<!-- Đoạn mã Google Analytics được thêm bởi Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-5R82NJ9" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["teky.edu.vn"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-5R82NJ9");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://teky.edu.vn/blog/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://teky.edu.vn/blog/wp-json/wp/v2/posts/7957" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://teky.edu.vn/blog/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.3" />
+<link rel='shortlink' href='https://teky.edu.vn/blog/?p=7957' />
+<link rel="alternate" title="oNhúng (JSON)" type="application/json+oembed" href="https://teky.edu.vn/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fteky.edu.vn%2Fblog%2Fngon-ngu-sql%2F" />
+<link rel="alternate" title="oNhúng (XML)" type="text/xml+oembed" href="https://teky.edu.vn/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fteky.edu.vn%2Fblog%2Fngon-ngu-sql%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.162.1" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRMXM82');</script>
+<!-- End Google Tag Manager --><script type="application/ld+json">{
+    "@context": "https://schema.org/",
+    "@type": "CreativeWorkSeries",
+    "name": "Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "bestRating": "5",
+        "ratingCount": "12"
+    }
+}</script>		<script type="text/javascript">
+				(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "quviw5r553");
+		</script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="6TexxRYdALB01Y4dZpVmj053AQ9hdfUHVqDUR8UxbIA"><meta name="google-site-verification" content="F6lyj7t_H7PwFRO0nejunt1SQiLxBHRezejZplOTAe4">
+<!-- Thẻ meta Google AdSense được thêm bởi Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- Kết thúc thẻ meta Google AdSense được thêm bởi Site Kit -->
+
+<!-- Meta Pixel Code -->
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Meta Pixel Code -->
+<script type='text/javascript'>var url = window.location.origin + '?ob=open-bridge';
+            fbq('set', 'openbridge', '1534129011344537', url);
+fbq('init', '1534129011344537', {}, {
+    "agent": "wordpress-6.8.3-4.1.5"
+})</script><script type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script><link rel="icon" href="https://teky.edu.vn/blog/wp-content/uploads/2020/12/favicon.ico" sizes="32x32" />
+<link rel="icon" href="https://teky.edu.vn/blog/wp-content/uploads/2020/12/favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://teky.edu.vn/blog/wp-content/uploads/2020/12/favicon.ico" />
+<meta name="msapplication-TileImage" content="https://teky.edu.vn/blog/wp-content/uploads/2020/12/favicon.ico" />
+</head>
+
+<body id="tie-body" class="wp-singular post-template-default single single-post postid-7957 single-format-standard wp-theme-jannah wp-child-theme-jannah-child wrapper-has-shadow block-head-1 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-3 has-header-ad sidebar-right has-sidebar post-layout-1 narrow-title-narrow-media is-standard-format has-mobile-share">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRMXM82"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=1534129011344537&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<div class="background-overlay">
+
+	<div id="tie-container" class="site tie-container">
+
+		
+		<div id="tie-wrapper">
+
+			
+<header id="theme-header" class="theme-header header-layout-3 main-nav-light main-nav-default-light main-nav-below main-nav-boxed has-stream-item has-shadow has-normal-width-logo mobile-header-default">
+	
+<div class="container header-container">
+	<div class="tie-row logo-row">
+
+		
+		<div class="logo-wrapper">
+			<div class="tie-col-md-4 logo-container clearfix">
+				<div id="mobile-header-components-area_1" class="mobile-header-components"><ul class="components"><li class="mobile-component_menu custom-menu-link"><a href="#" id="mobile-menu-icon" class=""><span class="tie-mobile-menu-icon nav-icon is-layout-1"></span><span class="screen-reader-text">Menu</span></a></li></ul></div>
+		<div id="logo" class="image-logo" >
+
+			
+			<a title="TEKY - Học viện sáng tạo công nghệ" href="https://teky.edu.vn/blog/">
+				
+				<picture class="tie-logo-default tie-logo-picture">
+					<source class="tie-logo-source-default tie-logo-source" srcset="https://teky.edu.vn/blog/wp-content/uploads/2023/07/teky-logo.png" media="(max-width:991px)">
+					<source class="tie-logo-source-default tie-logo-source" srcset="https://teky.edu.vn/blog/wp-content/uploads/2023/07/teky-logo.png">
+					<img class="tie-logo-img-default tie-logo-img" src="https://teky.edu.vn/blog/wp-content/uploads/2023/07/teky-logo.png" alt="TEKY - Học viện sáng tạo công nghệ" width="210" height="70" style="max-height:70px; width: auto;" />
+				</picture>
+						</a>
+
+			
+		</div><!-- #logo /-->
+
+		<div id="mobile-header-components-area_2" class="mobile-header-components"><ul class="components"><li class="mobile-component_search custom-menu-link">
+				<a href="#" class="tie-search-trigger-mobile">
+					<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+					<span class="screen-reader-text">Tìm kiếm</span>
+				</a>
+			</li></ul></div>			</div><!-- .tie-col /-->
+		</div><!-- .logo-wrapper /-->
+
+		<div class="tie-col-md-8 stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /-->
+	</div><!-- .tie-row /-->
+</div><!-- .container /-->
+
+<div class="main-nav-wrapper">
+	<nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent"  aria-label="Primary Navigation">
+		<div class="container">
+
+			<div class="main-menu-wrapper">
+
+				
+				<div id="menu-components-wrap">
+
+					
+
+
+					<div class="main-menu main-menu-wrap tie-alignleft">
+						<div id="main-nav-menu" class="main-menu header-menu"><ul id="menu-menu-chinh" class="menu"><li id="menu-item-26081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26081"><a href="#">Truyền cảm hứng</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-26082" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26082"><a href="https://teky.edu.vn/blog/hoc-sinh-tieu-bieu/">Học sinh tiêu biểu</a></li>
+	<li id="menu-item-258" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-258"><a href="https://teky.edu.vn/blog/san-pham-hoc-sinh/">Sản phẩm hay</a></li>
+	<li id="menu-item-27925" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27925"><a href="https://teky.edu.vn/blog/star-teacher-giao-vien-stem-tieu-bieu/">Star Teacher &#8211; Giáo viên STEM tiêu biểu</a></li>
+</ul>
+</li>
+<li id="menu-item-259" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-259"><a href="https://teky.edu.vn/blog/su-kien/">Khuyến mãi</a></li>
+<li id="menu-item-26078" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26078"><a href="#">Về Teky</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-256" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-256"><a href="https://teky.edu.vn/blog/bao-chi/">Báo chí nói về Teky</a></li>
+	<li id="menu-item-26988" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-26988"><a href="https://teky.edu.vn/blog/cuoc-thi/">Cuộc thi</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-26989" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26989"><a href="https://teky.edu.vn/blog/cuoc-thi/cuoc-thi-tech-genius-2025/">TECH GENIUS 2025</a></li>
+	</ul>
+</li>
+	<li id="menu-item-26079" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-26079"><a href="https://teky.edu.vn/blog/luyen-thi-cong-nghe/">Luyện thi công nghệ</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-26080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26080"><a href="https://teky.edu.vn/blog/luyen-thi-cong-nghe/cuoc-thi-hkico/">Cuộc thi HKICO</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-255"><a href="#">Kiến thức 4.0</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-14266" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14266"><a href="https://teky.edu.vn/blog/doi-moi-giao-duc/">Đổi mới giáo dục</a></li>
+	<li id="menu-item-254" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-254"><a href="https://teky.edu.vn/blog/nuoi-day-con/">Nuôi dạy con 4.0</a></li>
+	<li id="menu-item-2014" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2014"><a href="https://teky.edu.vn/blog/tin-cong-nghe/">Công nghệ &#8211; Thủ Thuật</a></li>
+</ul>
+</li>
+<li id="menu-item-26065" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26065"><a href="https://teky.edu.vn/blog/teky-mentor-ai/">Teky Mentor A.I</a></li>
+<li id="menu-item-26083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26083"><a href="https://edtech.teky.edu.vn/hoc_thu_mien_phi">Trải nghiệm miễn phí</a></li>
+<li id="menu-item-27829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27829"><a href="https://teky.edu.vn/blog/danh-gia-nang-luc-cong-nghe/">Đánh giá năng lực công nghệ</a></li>
+</ul></div>					</div><!-- .main-menu.tie-alignleft /-->
+
+					<ul class="components">			<li class="search-bar menu-item custom-menu-link" aria-label="Search">
+				<form method="get" id="search" action="https://teky.edu.vn/blog/">
+					<input id="search-input" class="is-ajax-search"  inputmode="search" type="text" name="s" title="Tìm kiếm" placeholder="Tìm kiếm" />
+					<button id="search-submit" type="submit">
+						<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+						<span class="screen-reader-text">Tìm kiếm</span>
+					</button>
+				</form>
+			</li>
+			</ul><!-- Components -->
+				</div><!-- #menu-components-wrap /-->
+			</div><!-- .main-menu-wrapper /-->
+		</div><!-- .container /-->
+
+			</nav><!-- #main-nav /-->
+</div><!-- .main-nav-wrapper /-->
+
+</header>
+
+<div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
+
+<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+
+	
+	<article id="the-post" class="container-wrapper post-content tie-standard">
+
+		
+<header class="entry-header-outer">
+
+	<nav id="breadcrumb"><a href="https://teky.edu.vn/blog/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><a href="https://teky.edu.vn/blog/lap-trinh/">IT - Lập trình</a><em class="delimiter">/</em><span class="current">Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/teky.edu.vn\/blog\/"}},{"@type":"ListItem","position":2,"item":{"name":"IT - L\u1eadp tr\u00ecnh","@id":"https:\/\/teky.edu.vn\/blog\/lap-trinh\/"}}]}</script>
+	<div class="entry-header">
+
+		<span class="post-cat-wrap"><a class="post-cat tie-cat-28" href="https://teky.edu.vn/blog/lap-trinh/">IT - Lập trình</a></span>
+		<h1 class="post-title entry-title">
+			Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL		</h1>
+
+		<div class="single-post-meta post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-10">
+						<span class="meta-author-avatar">
+							<a href="https://teky.edu.vn/blog/author/kimkhanh/"><img alt='Photo of Khánh Kim' src='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=140&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=280&#038;d=mm&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' decoding='async'/></a>
+						</span>
+					<span class="meta-author"><a href="https://teky.edu.vn/blog/author/kimkhanh/" class="author-name tie-icon" title="Khánh Kim">Khánh Kim</a></span></span></span><span class="date meta-item tie-icon">07/10/2023</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">0</span><span class="meta-views meta-item very-hot"><span class="tie-icon-fire" aria-hidden="true"></span> 17.390 </span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 8 phút đọc</span> </div></div><!-- .post-meta -->	</div><!-- .entry-header /-->
+
+	
+	
+</header><!-- .entry-header-outer /-->
+
+<div  class="featured-area"><div class="featured-area-inner"><figure class="single-featured-image"><img width="650" height="400" src="https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg" class="attachment-jannah-image-post size-jannah-image-post wp-post-image" alt="Chia sẻ về ngôn ngữ SQL cho bạn đọc" data-main-img="1" decoding="async" fetchpriority="high" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc-400x246.jpg 400w" sizes="(max-width: 650px) 100vw, 650px" />
+						<figcaption class="single-caption-text">
+							<span class="tie-icon-camera" aria-hidden="true"></span> Chia sẻ về ngôn ngữ SQL cho bạn đọc
+						</figcaption>
+					</figure></div></div>
+		<div class="entry-content entry clearfix">
+
+			
+			
+
+<div class="kk-star-ratings kksr-auto kksr-align-left kksr-valign-top"
+    data-payload='{&quot;align&quot;:&quot;left&quot;,&quot;id&quot;:&quot;7957&quot;,&quot;slug&quot;:&quot;default&quot;,&quot;valign&quot;:&quot;top&quot;,&quot;ignore&quot;:&quot;&quot;,&quot;reference&quot;:&quot;auto&quot;,&quot;class&quot;:&quot;&quot;,&quot;count&quot;:&quot;12&quot;,&quot;legendonly&quot;:&quot;&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;score&quot;:&quot;4.4&quot;,&quot;starsonly&quot;:&quot;&quot;,&quot;best&quot;:&quot;5&quot;,&quot;gap&quot;:&quot;5&quot;,&quot;greet&quot;:&quot;Rate this post&quot;,&quot;legend&quot;:&quot;4.4\/5 - (12 bình chọn)&quot;,&quot;size&quot;:&quot;24&quot;,&quot;title&quot;:&quot;Ngôn ngữ SQL là gì? Giới thiệu một số lệnh cơ bản của SQL&quot;,&quot;width&quot;:&quot;125.1&quot;,&quot;_legend&quot;:&quot;{score}\/{best} - ({count} {votes})&quot;,&quot;font_factor&quot;:&quot;1.25&quot;}'>
+            
+<div class="kksr-stars">
+    
+<div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+    </div>
+    
+<div class="kksr-stars-active" style="width: 125.1px;">
+            <div class="kksr-star" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 5px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+    </div>
+</div>
+                
+
+<div class="kksr-legend" style="font-size: 19.2px;">
+            4.4/5 - (12 bình chọn)    </div>
+    </div>
+<p style="text-align: justify;"><em><span style="font-weight: 400;">Đối với những người lập trình viên, hiểu và có thể sử dụng được <strong>ngôn ngữ SQL</strong> là vô cùng quan trọng. Rất nhiều người muốn tìm hiểu thêm các thông tin liên quan về SQL, chẳng hạn như SQL là gì, học SQL để làm gì, lập trình SQL như thế nào hiệu quả nhất? Nếu bạn cũng có chung những thắc mắc này, và muốn tìm hiểu thêm thông tin chi tiết, hãy đọc ngay bài viết dưới đây của chúng tôi. Thông tin chúng tôi mang đến cho bạn về SQL language chắc chắn có thể làm cho bạn hài lòng và áp dụng được thành công. Tìm hiểu ngay nhé!</span></em></p>
+<p><a href="https://lotrinhlaptrinh.teky.vn/?utm_id=ContentBlog&amp;utm_medium=Click_Blog&amp;utm_source=ContentBlog"><img decoding="async" class="aligncenter size-full wp-image-22416" src="https://teky.edu.vn/blog/wp-content/uploads/2023/10/dang-ky-lap-trinh-teky.gif" alt="dang-ky-lap-trinh" width="600" height="314" /></a></p>
+<div id="ez-toc-container" class="ez-toc-v2_0_76 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title" style="cursor:inherit">Nội dung </p>
+<span class="ez-toc-title-toggle"><a href="#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle" aria-label="Toggle Table of Content"><span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"/></svg></span></span></span></a></span></div>
+<nav><ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Ngon_ngu_SQL_la_gi" >Ngôn ngữ SQL là gì?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#SQL_duoc_ap_dung_nhieu_o_dau" >SQL được áp dụng nhiều ở đâu?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#Lich_su_hinh_thanh_ngon_ngu_SQL" >Lịch sử hình thành ngôn ngữ SQL</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Mot_so_cau_lenh_ngon_ngu_SQL_thuong_su_dung" >Một số câu lệnh ngôn ngữ SQL thường sử dụng </a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-5" href="#Ngon_ngu_dieu_khien_du_lieu_DCL" >Ngôn ngữ điều khiển dữ liệu DCL</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-6" href="#Ngon_ngu_su_dung_thao_tac_du_lieu_DML_cua_ngon_ngu_SQL" >Ngôn ngữ sử dụng thao tác dữ liệu DML của ngôn ngữ SQL</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-7" href="#Ngon_ngu_DDL" >Ngôn ngữ DDL</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-8" href="#Mot_so_cu_phap_truy_van_thuong_su_dung_trong_ngon_ngu_SQL" >Một số cú pháp truy vấn thường sử dụng trong ngôn ngữ SQL</a><ul class='ez-toc-list-level-3' ><li class='ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-9" href="#Thuat_toan_su_dung_menh_de_AND_OR" >Thuật toán sử dụng mệnh đề AND OR</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-10" href="#Cu_phap_su_dung_menh_de_WHERE" >Cú pháp sử dụng mệnh đề WHERE</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-11" href="#Menh_de_Distinct" >Mệnh đề Distinct</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-12" href="#Menh_de_Group_By" >Mệnh đề Group By</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-13" href="#Menh_de_Order_By" >Mệnh đề Order By</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-14" href="#Truy_van_Select" >Truy vấn Select</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-15" href="#Truy_van_Insert" >Truy vấn Insert</a></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-16" href="#Truy_van_Update_%E2%80%93_SQL_la_gi" >Truy vấn Update &#8211; SQL là gì?</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-17" href="#Hoc_Vien_Cong_Nghe_Teky_%E2%80%93_Noi_con_phat_trien_ky_nang_tu_duy_lap_trinh" >Học Viện Công Nghệ Teky &#8211; Nơi con phát triển kỹ năng, tư duy lập trình </a><ul class='ez-toc-list-level-4' ><li class='ez-toc-heading-level-4'><ul class='ez-toc-list-level-4' ><li class='ez-toc-heading-level-4'><a class="ez-toc-link ez-toc-heading-18" href="#Day_la_chuong_trinh_khong_chi_trang_bi_kien_thuc_lap_trinh_ma_con_ren_luyen_nhom_ky_nang_4Cs_Tre_se_duoc" >Đây là chương trình không chỉ trang bị kiến thức lập trình mà còn rèn luyện nhóm kỹ năng 4Cs. Trẻ sẽ được:</a></li></ul></li><li class='ez-toc-page-1 ez-toc-heading-level-3'><a class="ez-toc-link ez-toc-heading-19" href="#Lien_he_ngay_hoc_vien_cong_nghe_sang_tao_TEKY_de_duoc_tu_van_khoa_hoc" >Liên hệ ngay học viện công nghệ sáng tạo TEKY để được tư vấn khóa học:</a></li></ul></li></ul></nav></div>
+<h2 style="text-align: justify;"><span class="ez-toc-section" id="Ngon_ngu_SQL_la_gi"></span><b>Ngôn ngữ SQL là gì?</b><span class="ez-toc-section-end"></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">Dù rằng có nhiều người đã hiểu và sử dụng thông thạo lap trinh SQL, rất nhiều người tò mò không biết ngôn ngữ SQL là gì, sql viết tắt của từ gì. Từ SQL là viết tắt của cụm Structured Query Language, có nghĩa là loại ngôn ngữ truy vấn có cấu trúc. Đây là một loại ngôn ngữ máy tính vô cùng đặc thù, giúp hỗ trợ các thao tác lưu trữ, truy xuất dữ liệu cùng một cơ sở dữ liệu quan hệ một cách vô cùng nhanh chóng. </span></p>
+<p>&gt;&gt;&gt; xem thêm: <a href="https://teky.edu.vn/blog/cau-lenh-sql/"><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Câu lệnh SQL cơ bản - Học IT không khó cùng Teky&quot;}" data-sheets-userformat="{&quot;2&quot;:4481,&quot;3&quot;:{&quot;1&quot;:0},&quot;10&quot;:2,&quot;11&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">Câu lệnh SQL cơ bản &#8211; Học IT không khó cùng Teky</span></a></p>
+<p><iframe loading="lazy" title="Bài 1: Giới thiệu về Cơ sở dữ liệu, Ngôn ngữ SQL" width="780" height="585" src="https://www.youtube.com/embed/f3zPeU3lU4M?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Ngôn ngữ này đã được ANSI &#8211; viện tiêu chuẩn quốc gia của Hoa Kỳ đặt tiêu chuẩn hóa, và trở thành một ngôn ngữ được sử dụng vô cùng phổ biến ở trong các hệ thống công ty công nghệ có quy mô vô cùng lớn.</span></p>
+<p><em><strong>&gt;&gt;&gt; </strong>Xem thêm: <a href="https://teky.edu.vn/blog/sql-injection-la-gi/"><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;SQL Injection là gì? 3 cách phòng chống SQL Injection hiệu quả&quot;}" data-sheets-userformat="{&quot;2&quot;:4481,&quot;3&quot;:{&quot;1&quot;:0},&quot;10&quot;:2,&quot;11&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">SQL Injection là gì? 3 cách phòng chống SQL Injection hiệu quả</span></a></em></p>
+<h2 style="text-align: justify;"><span class="ez-toc-section" id="SQL_duoc_ap_dung_nhieu_o_dau"></span><b>SQL được áp dụng nhiều ở đâu?</b><span class="ez-toc-section-end"></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">Thực tế, ngôn ngữ pl/sql là gì này được ta sử dụng trong nhiều trường hợp khác nhau, đặc biệt là trong các bảng quyết toán, bảng lương, danh sách phòng ban, nhân viên… Khi bảng này được lưu lại thành CSDL thì chúng ta có thể sử dụng SQL để có thể nhanh chóng phân tích, xử lý những thông tin bên trong nó. Ta thấy rằng kết quả thực hiện từ SQL là một bảng việc mới, giúp tiến hành xử lý nhanh chóng dễ dàng hơn.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Ngoài ra, SQL còn được áp dụng để cập nhật cho những thông tin đã có trước đó. Việc này được xử lý rất nhanh chóng và đảm bảo không có sai sót, hoặc là bỏ lẫn tồn đọng nào.</span></p>
+<figure id="attachment_7955" aria-describedby="caption-attachment-7955" style="width: 650px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-7955" src="https://teky.edu.vn/blog/wp-content/uploads/2021/07/hoc-lap-trinh-sql-ra-sao.jpg" alt="Học lập trình SQL ra sao?" width="650" height="400" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/07/hoc-lap-trinh-sql-ra-sao.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/07/hoc-lap-trinh-sql-ra-sao-400x246.jpg 400w" sizes="auto, (max-width: 650px) 100vw, 650px" /><figcaption id="caption-attachment-7955" class="wp-caption-text">Học lập trình SQL ra sao?</figcaption></figure>
+<h2 style="text-align: justify;"><span class="ez-toc-section" id="Lich_su_hinh_thanh_ngon_ngu_SQL"></span><b>Lịch sử hình thành ngôn ngữ SQL</b><span class="ez-toc-section-end"></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">Nhắc tới lịch sử hình thành nên ngôn ngữ SQL, có thể nói rằng đó là cả một quá trình hình thành, phát triển mở rộng. Chúng đã trải qua nhiều giai đoạn đột phá khác nhau, giúp hoàn thiện cho bộ máy ngon ngu SQL lên đến tầm đột phá đỉnh cao. Một số dấu mốc quan trọng có thể kể đến như sau.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Vào năm 1970, đây được coi là cột mốc lịch sử đầu tiên trong quá trình hình thành nên thứ ngôn ngữ mới SQL. Cha đẻ cho cơ sở dữ liệu quan hệ này chính là người của IBM, ông Dr.Edgar F.Ted Codd. Ông đã thực hiện nên nhiều miêu tả cho mối quan hệ giữa các Database.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Vào năm 1974, lần đầu xuất hiện thuật ngữ SQL và được nhiều người biết đến hơn nhờ mô hình được miêu tả.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Cho đến năm 1978, IBM công bố sản phẩm System/R dựa vào việc tiếp tục phát triển, cũng như hoàn thiện những ý tưởng mới của F.Ted Codd. </span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Tiếp đến năm 1986, đây là năm được coi là hoàn thiện cả về ngôn ngữ cũng như cơ sở dữ liệu quan hệ. Vào năm này, IBM đã thực hiện hoàn chỉnh nguyên mẫu đầu tiên được ANSI chuẩn hóa. Ngoài ra, Relational Database cũng được công bố với Relational Software với Oracle vào một thời gian sau đó. Không khó hiểu tại sao vào thời gian này lại có sự bùng nổ về việc tìm hiểu học SQL ở đâu, và cho đến hiện tại lượt truy cập vào các tài liệu SQL server vẫn là rất lớn.</span></p>
+<p><em><strong>&gt;&gt;&gt;Mời bạn tham khảo thêm:</strong> <a href="https://teky.edu.vn/blog/sql-la-gi/"><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;SQL là gì? Tại sao bạn nên học phương pháp lập trình SQL?&quot;}" data-sheets-userformat="{&quot;2&quot;:4481,&quot;3&quot;:{&quot;1&quot;:0},&quot;10&quot;:2,&quot;11&quot;:0,&quot;15&quot;:&quot;Arial&quot;}">SQL là gì? Tại sao bạn nên học phương pháp lập trình SQL?</span></a></em></p>
+<h2 style="text-align: justify;"><span class="ez-toc-section" id="Mot_so_cau_lenh_ngon_ngu_SQL_thuong_su_dung"></span><b>Một số câu lệnh ngôn ngữ SQL thường sử dụng </b><span class="ez-toc-section-end"></span></h2>
+<p style="text-align: justify;"><span style="font-weight: 400;">Dưới đây là một số câu lệnh thường được sử dụng bên trong ngôn ngữ SQL. Nếu như bạn muốn nắm rõ thêm SQL la gi, chắc chắn bạn không thể bỏ qua những thông tin dưới đây.</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Ngon_ngu_dieu_khien_du_lieu_DCL"></span><b>Ngôn ngữ điều khiển dữ liệu DCL</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">DCL của ngôn ngữ SQL sẽ gồm có những lệnh sau:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">GRANT: Đây là lệnh được sử dụng khi muốn trao quyền cho người dùng</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">REVOKE: Đây là lệnh được sử dụng khi muốn thu hồi lại quyền đã trao cho người sử dụng.</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Ngon_ngu_su_dung_thao_tac_du_lieu_DML_cua_ngon_ngu_SQL"></span><b>Ngôn ngữ sử dụng thao tác dữ liệu DML của ngôn ngữ SQL</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Nhắc đến thao tác dữ liệu trên DML hay còn biết đến là Data Manipulation Language, chắc chắn không thể bỏ qua một số lệnh sau:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">SELECT: Đây là lệnh thường được dùng khi muốn lấy một hoặc một vài bản ghi nhất định, có từ một hoặc nhiều bảng khác nhau.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">INSERT: Được sử dụng khi bạn muốn tạo nên một bản ghi</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">UPDATE: Lệnh này sẽ được thực hiện nếu bạn muốn chỉnh sửa một bản ghi</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">DELETE: Đây là lệnh được nhiều người biết tới, nó được dùng nếu bạn muốn xóa bản ghi.</span></p>
+<figure id="attachment_7956" aria-describedby="caption-attachment-7956" style="width: 650px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-7956 size-full" src="https://teky.edu.vn/blog/wp-content/uploads/2021/07/giai-ma-thong-tin-ve-sql.jpg" alt="Giải mã thông tin về SQL là gì?" width="650" height="400" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/07/giai-ma-thong-tin-ve-sql.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/07/giai-ma-thong-tin-ve-sql-400x246.jpg 400w" sizes="auto, (max-width: 650px) 100vw, 650px" /><figcaption id="caption-attachment-7956" class="wp-caption-text">Giải mã thông tin về SQL là gì?</figcaption></figure>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Ngon_ngu_DDL"></span><a href="https://vi.wikipedia.org/wiki/Dynamic_Link_Library" rel="nofollow noreferrer"><b>Ngôn ngữ DDL</b></a><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">DDL là viết tắt của từ Data Definition Language. Cụm này gồm có các lệnh như sau:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">CREATE: Giúp tạo ra một bảng mới, một view mới của một bảng hoặc là của các đối tượng khác nhau trong cùng một Database.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">ALTER: Được sử dụng khi muốn sửa đổi đối tượng khi đã tồn tại bên trong một Database.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">DROP: Lệnh này được áp dụng nếu bạn muốn xóa bảng, xóa view của một bản hoặc là của một đối tượng khác bên trong Database đó.</span></p>
+<p><a href="https://lotrinhlaptrinh.teky.vn/?utm_id=ContentBlog&amp;utm_medium=Click_Blog&amp;utm_source=ContentBlog"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-22417" src="https://teky.edu.vn/blog/wp-content/uploads/2023/10/dang-ky-lap-trinh-teky1.gif" alt="dang-ky-lap-trinh-teky1" width="600" height="314" /></a></p>
+<h2 style="text-align: justify;"><span class="ez-toc-section" id="Mot_so_cu_phap_truy_van_thuong_su_dung_trong_ngon_ngu_SQL"></span><b>Một số cú pháp truy vấn thường sử dụng trong ngôn ngữ SQL</b><span class="ez-toc-section-end"></span></h2>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Thuat_toan_su_dung_menh_de_AND_OR"></span><b>Thuật toán sử dụng mệnh đề AND OR</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Với thuật toán này, bạn cần phải kết hợp nhiều điều kiện khác nhau trong ngôn ngữ SQL. Đây là chức năng chính của mệnh đề này.</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Cú pháp mà bạn cần tạo:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: SELECT cot1, cot2, cotN</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: FROM ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: WHERE [dieu_kien_1] AND [dieu_kien_2]…AND [dieu_kien_N];</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Cu_phap_su_dung_menh_de_WHERE"></span><b>Cú pháp sử dụng mệnh đề WHERE</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Mệnh đề này được áp dụng giúp xác định điều kiện khi lấy một số dữ liệu ở bên trong bảng. Cú pháp của chúng bao gồm: </span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: SELECT cot1, cot2, cotN</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: FROM ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: WHERE [dieu_kien]</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Menh_de_Distinct"></span><b>Mệnh đề Distinct</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: </span><span style="font-weight: 400;">SELECT DISTINCT cot1, cot2, …cotN</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: FROM ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: WHERE [dieu_kien]</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Menh_de_Group_By"></span><b>Mệnh đề Group By</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Cú pháp của mệnh đề này khi dùng trong ngôn ngữ SQL có phần phức tạp hơn, tuy nhiên vẫn dễ dàng để bạn có thể hiểu và áp dụng nhanh chóng:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: SELECT cot1, cot2</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: FROM ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: WHERE [dieu_kien]</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 4: GROUP BY cot1, cot2</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 5: ORDER BY cot1, cot2</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Menh_de_Order_By"></span><b>Mệnh đề Order By</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Thông tin về ngôn ngữ SQL trong mệnh đề Order By được mang đến như sau:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: SELECT danh_sach_cot</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: FROM ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: [WHERE dieu_kien]</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 4: [ORDER BY cot1, cot2, …cotN] [ASC | DESC];</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Truy_van_Select"></span><b>Truy vấn Select</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Đối với truy vấn này, nếu bạn muốn xác định các cột có giá trị muốn lấy, bạn nhập như sau: </span><span style="font-weight: 400;">SELECT cot1, cot2, cotN FROM ten_bang;</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Còn nếu bạn muốn xác định được thao tác của tất cả các cột, bạn sẽ nhập như sau: </span><span style="font-weight: 400;">SELECT * FROM ten_bang;</span></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Truy_van_Insert"></span><b>Truy vấn Insert</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Cú pháp để xác định được cột chèn dữ liệu là” </span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">INSERT INTO TABLE_TEN (cot1, cot2, cot3, …. CotN)</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">VALUES (giaitri1, giaitri2, giaitri3, …giatriN)</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Thao tác được áp dụng trên tất cả các cột có trong bảng là:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">INSERT INTO TABLE_TEN VALUES (giaitri1,giaitri2,giaitri3,…giaitriN)</span></p>
+<p><a href="https://lotrinhlaptrinh.teky.vn/?utm_id=ContentBlog&amp;utm_medium=Click_Blog&amp;utm_source=ContentBlog"><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-22422" src="https://teky.edu.vn/blog/wp-content/uploads/2023/10/lap-trinh-cho-tre.gif" alt="lap-trinh-cho-tre" width="600" height="314" /></a></p>
+<h3 style="text-align: justify;"><span class="ez-toc-section" id="Truy_van_Update_%E2%80%93_SQL_la_gi"></span><b>Truy vấn Update &#8211; SQL là gì?</b><span class="ez-toc-section-end"></span></h3>
+<p style="text-align: justify;"><span style="font-weight: 400;">Nhắc đến truy vấn Update, cú pháp để chèn đối với ngôn ngữ SQL cũng không gây ra nhiều khó khăn. Bạn có thể tìm hiểu ngay như sau:</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 1: UPDATE: ten_bang</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 2: SET cot1 = giaitri1, cot2 = giaitri2, cotN = giaitriN</span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Bước 3: WHERE [dieu_kien]</span></p>
+<figure id="attachment_7954" aria-describedby="caption-attachment-7954" style="width: 650px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-7954 size-full" src="https://teky.edu.vn/blog/wp-content/uploads/2021/07/nhieu-thac-mac-ve-ngon-ngu-nay-tu-ban-doc.jpg" alt="Nhiều thắc mắc về ngôn ngữ này từ bạn đọc" width="650" height="400" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/07/nhieu-thac-mac-ve-ngon-ngu-nay-tu-ban-doc.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/07/nhieu-thac-mac-ve-ngon-ngu-nay-tu-ban-doc-400x246.jpg 400w" sizes="auto, (max-width: 650px) 100vw, 650px" /><figcaption id="caption-attachment-7954" class="wp-caption-text">Nhiều thắc mắc về ngôn ngữ này từ bạn đọc &#8211; Ngôn ngữ SQL là gì?</figcaption></figure>
+<p style="text-align: justify;"><span style="font-weight: 400;">Trên đây là những thông tin mà chúng tôi mang đến cho bạn đọc về ngôn ngữ SQL, ngoài ra giới thiệu cho bạn một số lệnh, truy vấn hay gặp để bạn có thể áp dụng. Nếu bạn thấy những chia sẻ này thú vị và bổ ích, hãy giúp chúng tôi chia sẻ rộng rãi tới nhiều bạn đọc khác hơn nữa nhé. Ngoài ra, đừng quên tham khảo thêm những thông tin bổ ích khác từ Teky, ví dụ bài viết tìm hiểu về </span><a href="https://teky.edu.vn/blog/business-analyst-la-gi/"><span style="font-weight: 400;">Business Analyst là gì</span></a><span style="font-weight: 400;"> bạn nhé. Chắc chắn bạn sẽ không thất vọng với những thông tin mà mình nhận được đâu.</span></p>
+<p>&nbsp;</p>
+<h2><span class="ez-toc-section" id="Hoc_Vien_Cong_Nghe_Teky_%E2%80%93_Noi_con_phat_trien_ky_nang_tu_duy_lap_trinh"></span><span style="font-size: 24px; color: #339966;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Cùng Tìm Hiểu Về Teky Học Viện 5 sao Đào Tạo Trẻ Em Học Lập Trình (4-18 tuổi)&quot;}" data-sheets-userformat="{&quot;2&quot;:17153,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0,&quot;17&quot;:1}">Học Viện Công Nghệ Teky &#8211; Nơi con phát triển kỹ năng, tư duy lập trình </span><span class="ez-toc-section-end"></span></h2>
+<p><iframe loading="lazy" title="Học lập trình trẻ em ở đâu? - Giới thiệu học viện công nghệ TEKY hàng đầu Việt Nam" width="780" height="439" src="https://www.youtube.com/embed/kGgr0XJAxFM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><strong>TEKY là Học viện sáng tạo công nghệ</strong> với chương trình giảng dạy STEAM (Science – Technology – Engineering – Art – Mathematics) theo chuẩn Mỹ đầu tiên tại Việt Nam dành cho trẻ em từ 4 đến 18 tuổi.</p>
+<p>Được thành lập vào tháng 6 năm 2016, TEKY quyết tâm thực hiện sứ mệnh mang đến cho thế hệ trẻ Việt Nam kiến thức toàn diện về STEAM, đặc biệt là các tư duy công nghệ, khoa học máy tính và kỹ năng thế kỷ 21 – 4Cs (Critical Thinking: Tư duy phản biện – Communication: Giao tiếp – Creativity: Sáng tạo – Collaboration: Làm việc nhóm).</p>
+<figure id="attachment_14828" aria-describedby="caption-attachment-14828" style="width: 600px" class="wp-caption aligncenter"><a href="https://teky.edu.vn/?utm_source=Blog&amp;utm_medium=baiviet"><img loading="lazy" decoding="async" class="wp-image-14828 size-full" src="https://teky.edu.vn/blog/wp-content/uploads/2021/03/Trai-nghiem-hoc-lap-trinh-mien-phi.jpg" alt="Trải nghiệm học lập trình miễn phí" width="600" height="400" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/03/Trai-nghiem-hoc-lap-trinh-mien-phi.jpg 600w, https://teky.edu.vn/blog/wp-content/uploads/2021/03/Trai-nghiem-hoc-lap-trinh-mien-phi-400x267.jpg 400w, https://teky.edu.vn/blog/wp-content/uploads/2021/03/Trai-nghiem-hoc-lap-trinh-mien-phi-272x182.jpg 272w" sizes="auto, (max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-14828" class="wp-caption-text">Trải nghiệm học lập trình miễn phí</figcaption></figure>
+<h4><span class="ez-toc-section" id="Day_la_chuong_trinh_khong_chi_trang_bi_kien_thuc_lap_trinh_ma_con_ren_luyen_nhom_ky_nang_4Cs_Tre_se_duoc"></span>Đây là chương trình không chỉ trang bị kiến thức lập trình mà còn rèn luyện nhóm kỹ năng 4Cs. Trẻ sẽ được:<span class="ez-toc-section-end"></span></h4>
+<ul>
+<li> Học tư duy phản biện thông qua việc phân tích các vấn đề.</li>
+<li> Học tính sáng tạo tư duy Logic thông qua việc lắp đặt và lập trình robot th ông qua các mô hình Lego Mindstorm, app trò chơi. Giúp con học giỏi môn Toán trên lớp</li>
+<li> Kỹ năng hợp tác thông qua các trò chơi team-building, các dự án nhóm trên lớp.</li>
+<li> Phát huy khả năng giao tiếp hiệu quả bằng nhiều bài tập và hoạt động hấp dẫn.</li>
+</ul>
+<p><iframe loading="lazy" title="Shark Nguyễn Hoà Bình đồng hành cùng con học lập trình tại học viện công nghệ Teky hàng đầu Việt Nam" width="780" height="439" src="https://www.youtube.com/embed/q6QbqIs6ll8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Các bộ môn giảng dạy tại Teky gồm: <span style="font-weight: 400;">Lập trình và phát triển ứng dụng</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">lập trình game</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">lập trình web với python</span> <span style="font-weight: 400;"> </span><span style="font-weight: 400;">Lập trình Scratch</span> <span style="font-weight: 400;">Robotics</span> Engineering, Công nghệ 3D và MultiMedia. Chúng tôi tin rằng trẻ em Việt Nam có cơ hội phát triển mạnh mẽ trong một nền kinh tế số và cần được trang bị sẵn sàng để trở thành những doanh nhân công nghệ trong tương lai.</p>
+<h3><span class="ez-toc-section" id="Lien_he_ngay_hoc_vien_cong_nghe_sang_tao_TEKY_de_duoc_tu_van_khoa_hoc"></span><span style="color: #008000;"><b>Liên hệ ngay học viện công nghệ sáng tạo TEKY để được tư vấn khóa học:</b></span><span class="ez-toc-section-end"></span></h3>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cam kêt 7 tuổi có thể lập trình</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Top 10 dự án giáo dục có tầm ảnh hưởng nhất Đông Nam Á 2017 &amp; 2018</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Top 3 Dự án xuất sắc nhất, NextGen – Thụy Sĩ</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> Hotline Hà Nội: 024-7109-6668 | 0975-241-015</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> Hotline Hồ Chí Minh: 028-7109 9948 | 097-900-8642</span></li>
+</ul>
+<p><span style="font-weight: 400;">Website </span><a href="https://teky.edu.vn/"><span style="font-weight: 400;">https://teky.edu.vn</span></a><span style="font-weight: 400;"> | Email: support@teky.edu.vn |</span></p>
+<p><strong>Xem thêm: </strong></p>
+<ul>
+<li><a class="LinkSuggestion__Link-sc-1gewdgc-4 evyocv" href="https://teky.edu.vn/blog/sql-la-gi/" target="_blank" rel="noopener">SQL là gì? Tại sao bạn nên học phương pháp lập trình SQL?</a></li>
+<li><a class="LinkSuggestion__Link-sc-1gewdgc-4 evyocv" href="https://teky.edu.vn/blog/cau-lenh-sql/" target="_blank" rel="noopener">Câu lệnh SQL cơ bản &#8211; Học IT không khó cùng Teky</a></li>
+<li><a class="LinkSuggestion__Link-sc-1gewdgc-4 evyocv" href="https://teky.edu.vn/blog/sql-injection-la-gi/" target="_blank" rel="noopener">SQL Injection là gì? 3 cách phòng chống SQL Injection hiệu quả nhất</a></li>
+<li><a class="LinkSuggestion__Link-sc-1gewdgc-4 evyocv" href="https://teky.edu.vn/blog/be-hoc-lap-trinh/" target="_blank" rel="noopener">Bé Học Lập Trình – 7 Quan Niệm Sai Lầm Ba Mẹ Thường Mắc Phải</a></li>
+</ul>
+
+			
+		</div><!-- .entry-content /-->
+
+				<div id="post-extra-info">
+			<div class="theiaStickySidebar">
+				<div class="single-post-meta post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-10">
+						<span class="meta-author-avatar">
+							<a href="https://teky.edu.vn/blog/author/kimkhanh/"><img alt='Photo of Khánh Kim' src='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=140&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=280&#038;d=mm&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/></a>
+						</span>
+					<span class="meta-author"><a href="https://teky.edu.vn/blog/author/kimkhanh/" class="author-name tie-icon" title="Khánh Kim">Khánh Kim</a></span></span></span><span class="date meta-item tie-icon">07/10/2023</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">0</span><span class="meta-views meta-item very-hot"><span class="tie-icon-fire" aria-hidden="true"></span> 17.390 </span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 8 phút đọc</span> </div></div><!-- .post-meta -->			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<script id="tie-schema-json" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2023-10-07T23:27:35+07:00","datePublished":"2023-10-07T23:27:35+07:00","dateModified":"2023-10-20T09:29:16+07:00","headline":"Ng\u00f4n ng\u1eef SQL l\u00e0 g\u00ec? Gi\u1edbi thi\u1ec7u m\u1ed9t s\u1ed1 l\u1ec7nh c\u01a1 b\u1ea3n c\u1ee7a SQL","name":"Ng\u00f4n ng\u1eef SQL l\u00e0 g\u00ec? Gi\u1edbi thi\u1ec7u m\u1ed9t s\u1ed1 l\u1ec7nh c\u01a1 b\u1ea3n c\u1ee7a SQL","keywords":[],"url":"https:\/\/teky.edu.vn\/blog\/ngon-ngu-sql\/","description":"\u0110\u1ed1i v\u1edbi nh\u1eefng ng\u01b0\u1eddi l\u1eadp tr\u00ecnh vi\u00ean, hi\u1ec3u v\u00e0 c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng \u0111\u01b0\u1ee3c ng\u00f4n ng\u1eef SQL l\u00e0 v\u00f4 c\u00f9ng quan tr\u1ecdng. R\u1ea5t nhi\u1ec1u ng\u01b0\u1eddi mu\u1ed1n t\u00ecm hi\u1ec3u th\u00eam c\u00e1c th\u00f4ng tin li\u00ean quan v\u1ec1 SQL, ch\u1eb3ng h\u1ea1n nh\u01b0 SQL l\u00e0 g\u00ec, h\u1ecdc SQL","copyrightYear":"2023","articleSection":"IT - L\u1eadp tr\u00ecnh","articleBody":"\u0110\u1ed1i v\u1edbi nh\u1eefng ng\u01b0\u1eddi l\u1eadp tr\u00ecnh vi\u00ean, hi\u1ec3u v\u00e0 c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng \u0111\u01b0\u1ee3c ng\u00f4n ng\u1eef SQL l\u00e0 v\u00f4 c\u00f9ng quan tr\u1ecdng. R\u1ea5t nhi\u1ec1u ng\u01b0\u1eddi mu\u1ed1n t\u00ecm hi\u1ec3u th\u00eam c\u00e1c th\u00f4ng tin li\u00ean quan v\u1ec1 SQL, ch\u1eb3ng h\u1ea1n nh\u01b0 SQL l\u00e0 g\u00ec, h\u1ecdc SQL \u0111\u1ec3 l\u00e0m g\u00ec, l\u1eadp tr\u00ecnh SQL nh\u01b0 th\u1ebf n\u00e0o hi\u1ec7u qu\u1ea3 nh\u1ea5t? N\u1ebfu b\u1ea1n c\u0169ng c\u00f3 chung nh\u1eefng th\u1eafc m\u1eafc n\u00e0y, v\u00e0 mu\u1ed1n t\u00ecm hi\u1ec3u th\u00eam th\u00f4ng tin chi ti\u1ebft, h\u00e3y \u0111\u1ecdc ngay b\u00e0i vi\u1ebft d\u01b0\u1edbi \u0111\u00e2y c\u1ee7a ch\u00fang t\u00f4i. Th\u00f4ng tin ch\u00fang t\u00f4i mang \u0111\u1ebfn cho b\u1ea1n v\u1ec1 SQL language ch\u1eafc ch\u1eafn c\u00f3 th\u1ec3 l\u00e0m cho b\u1ea1n h\u00e0i l\u00f2ng v\u00e0 \u00e1p d\u1ee5ng \u0111\u01b0\u1ee3c th\u00e0nh c\u00f4ng. T\u00ecm hi\u1ec3u ngay nh\u00e9!\r\n\r\nNg\u00f4n ng\u1eef SQL l\u00e0 g\u00ec?\r\nD\u00f9 r\u1eb1ng c\u00f3 nhi\u1ec1u ng\u01b0\u1eddi \u0111\u00e3 hi\u1ec3u v\u00e0 s\u1eed d\u1ee5ng th\u00f4ng th\u1ea1o lap trinh SQL, r\u1ea5t nhi\u1ec1u ng\u01b0\u1eddi t\u00f2 m\u00f2 kh\u00f4ng bi\u1ebft ng\u00f4n ng\u1eef SQL l\u00e0 g\u00ec, sql vi\u1ebft t\u1eaft c\u1ee7a t\u1eeb g\u00ec. T\u1eeb SQL l\u00e0 vi\u1ebft t\u1eaft c\u1ee7a c\u1ee5m Structured Query Language, c\u00f3 ngh\u0129a l\u00e0 lo\u1ea1i ng\u00f4n ng\u1eef truy v\u1ea5n c\u00f3 c\u1ea5u tr\u00fac. \u0110\u00e2y l\u00e0 m\u1ed9t lo\u1ea1i ng\u00f4n ng\u1eef m\u00e1y t\u00ednh v\u00f4 c\u00f9ng \u0111\u1eb7c th\u00f9, gi\u00fap h\u1ed7 tr\u1ee3 c\u00e1c thao t\u00e1c l\u01b0u tr\u1eef, truy xu\u1ea5t d\u1eef li\u1ec7u c\u00f9ng m\u1ed9t c\u01a1 s\u1edf d\u1eef li\u1ec7u quan h\u1ec7 m\u1ed9t c\u00e1ch v\u00f4 c\u00f9ng nhanh ch\u00f3ng.\u00a0\r\n&gt;&gt;&gt; xem th\u00eam: C\u00e2u l\u1ec7nh SQL c\u01a1 b\u1ea3n - H\u1ecdc IT kh\u00f4ng kh\u00f3 c\u00f9ng Teky\r\n\r\nhttps:\/\/youtu.be\/f3zPeU3lU4M\r\nNg\u00f4n ng\u1eef n\u00e0y \u0111\u00e3 \u0111\u01b0\u1ee3c ANSI - vi\u1ec7n ti\u00eau chu\u1ea9n qu\u1ed1c gia c\u1ee7a Hoa K\u1ef3 \u0111\u1eb7t ti\u00eau chu\u1ea9n h\u00f3a, v\u00e0 tr\u1edf th\u00e0nh m\u1ed9t ng\u00f4n ng\u1eef \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng v\u00f4 c\u00f9ng ph\u1ed5 bi\u1ebfn \u1edf trong c\u00e1c h\u1ec7 th\u1ed1ng c\u00f4ng ty c\u00f4ng ngh\u1ec7 c\u00f3 quy m\u00f4 v\u00f4 c\u00f9ng l\u1edbn.\r\n&gt;&gt;&gt;\u00a0Xem th\u00eam: SQL Injection l\u00e0 g\u00ec? 3 c\u00e1ch ph\u00f2ng ch\u1ed1ng SQL Injection hi\u1ec7u qu\u1ea3\r\nSQL \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng nhi\u1ec1u \u1edf \u0111\u00e2u?\r\nTh\u1ef1c t\u1ebf, ng\u00f4n ng\u1eef pl\/sql l\u00e0 g\u00ec n\u00e0y \u0111\u01b0\u1ee3c ta s\u1eed d\u1ee5ng trong nhi\u1ec1u tr\u01b0\u1eddng h\u1ee3p kh\u00e1c nhau, \u0111\u1eb7c bi\u1ec7t l\u00e0 trong c\u00e1c b\u1ea3ng quy\u1ebft to\u00e1n, b\u1ea3ng l\u01b0\u01a1ng, danh s\u00e1ch ph\u00f2ng ban, nh\u00e2n vi\u00ean\u2026 Khi b\u1ea3ng n\u00e0y \u0111\u01b0\u1ee3c l\u01b0u l\u1ea1i th\u00e0nh CSDL th\u00ec ch\u00fang ta c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng SQL \u0111\u1ec3 c\u00f3 th\u1ec3 nhanh ch\u00f3ng ph\u00e2n t\u00edch, x\u1eed l\u00fd nh\u1eefng th\u00f4ng tin b\u00ean trong n\u00f3. Ta th\u1ea5y r\u1eb1ng k\u1ebft qu\u1ea3 th\u1ef1c hi\u1ec7n t\u1eeb SQL l\u00e0 m\u1ed9t b\u1ea3ng vi\u1ec7c m\u1edbi, gi\u00fap ti\u1ebfn h\u00e0nh x\u1eed l\u00fd nhanh ch\u00f3ng d\u1ec5 d\u00e0ng h\u01a1n.\r\nNgo\u00e0i ra, SQL c\u00f2n \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng \u0111\u1ec3 c\u1eadp nh\u1eadt cho nh\u1eefng th\u00f4ng tin \u0111\u00e3 c\u00f3 tr\u01b0\u1edbc \u0111\u00f3. Vi\u1ec7c n\u00e0y \u0111\u01b0\u1ee3c x\u1eed l\u00fd r\u1ea5t nhanh ch\u00f3ng v\u00e0 \u0111\u1ea3m b\u1ea3o kh\u00f4ng c\u00f3 sai s\u00f3t, ho\u1eb7c l\u00e0 b\u1ecf l\u1eabn t\u1ed3n \u0111\u1ecdng n\u00e0o.\r\n\r\n\r\n\r\nL\u1ecbch s\u1eed h\u00ecnh th\u00e0nh ng\u00f4n ng\u1eef SQL\r\nNh\u1eafc t\u1edbi l\u1ecbch s\u1eed h\u00ecnh th\u00e0nh n\u00ean ng\u00f4n ng\u1eef SQL, c\u00f3 th\u1ec3 n\u00f3i r\u1eb1ng \u0111\u00f3 l\u00e0 c\u1ea3 m\u1ed9t qu\u00e1 tr\u00ecnh h\u00ecnh th\u00e0nh, ph\u00e1t tri\u1ec3n m\u1edf r\u1ed9ng. Ch\u00fang \u0111\u00e3 tr\u1ea3i qua nhi\u1ec1u giai \u0111o\u1ea1n \u0111\u1ed9t ph\u00e1 kh\u00e1c nhau, gi\u00fap ho\u00e0n thi\u1ec7n cho b\u1ed9 m\u00e1y ngon ngu SQL l\u00ean \u0111\u1ebfn t\u1ea7m \u0111\u1ed9t ph\u00e1 \u0111\u1ec9nh cao. M\u1ed9t s\u1ed1 d\u1ea5u m\u1ed1c quan tr\u1ecdng c\u00f3 th\u1ec3 k\u1ec3 \u0111\u1ebfn nh\u01b0 sau.\r\nV\u00e0o n\u0103m 1970, \u0111\u00e2y \u0111\u01b0\u1ee3c coi l\u00e0 c\u1ed9t m\u1ed1c l\u1ecbch s\u1eed \u0111\u1ea7u ti\u00ean trong qu\u00e1 tr\u00ecnh h\u00ecnh th\u00e0nh n\u00ean th\u1ee9 ng\u00f4n ng\u1eef m\u1edbi SQL. Cha \u0111\u1ebb cho c\u01a1 s\u1edf d\u1eef li\u1ec7u quan h\u1ec7 n\u00e0y ch\u00ednh l\u00e0 ng\u01b0\u1eddi c\u1ee7a IBM, \u00f4ng Dr.Edgar F.Ted Codd. \u00d4ng \u0111\u00e3 th\u1ef1c hi\u1ec7n n\u00ean nhi\u1ec1u mi\u00eau t\u1ea3 cho m\u1ed1i quan h\u1ec7 gi\u1eefa c\u00e1c Database.\r\nV\u00e0o n\u0103m 1974, l\u1ea7n \u0111\u1ea7u xu\u1ea5t hi\u1ec7n thu\u1eadt ng\u1eef SQL v\u00e0 \u0111\u01b0\u1ee3c nhi\u1ec1u ng\u01b0\u1eddi bi\u1ebft \u0111\u1ebfn h\u01a1n nh\u1edd m\u00f4 h\u00ecnh \u0111\u01b0\u1ee3c mi\u00eau t\u1ea3.\r\nCho \u0111\u1ebfn n\u0103m 1978, IBM c\u00f4ng b\u1ed1 s\u1ea3n ph\u1ea9m System\/R d\u1ef1a v\u00e0o vi\u1ec7c ti\u1ebfp t\u1ee5c ph\u00e1t tri\u1ec3n, c\u0169ng nh\u01b0 ho\u00e0n thi\u1ec7n nh\u1eefng \u00fd t\u01b0\u1edfng m\u1edbi c\u1ee7a F.Ted Codd.\u00a0\r\nTi\u1ebfp \u0111\u1ebfn n\u0103m 1986, \u0111\u00e2y l\u00e0 n\u0103m \u0111\u01b0\u1ee3c coi l\u00e0 ho\u00e0n thi\u1ec7n c\u1ea3 v\u1ec1 ng\u00f4n ng\u1eef c\u0169ng nh\u01b0 c\u01a1 s\u1edf d\u1eef li\u1ec7u quan h\u1ec7. V\u00e0o n\u0103m n\u00e0y, IBM \u0111\u00e3 th\u1ef1c hi\u1ec7n ho\u00e0n ch\u1ec9nh nguy\u00ean m\u1eabu \u0111\u1ea7u ti\u00ean \u0111\u01b0\u1ee3c ANSI chu\u1ea9n h\u00f3a. Ngo\u00e0i ra, Relational Database c\u0169ng \u0111\u01b0\u1ee3c c\u00f4ng b\u1ed1 v\u1edbi Relational Software v\u1edbi Oracle v\u00e0o m\u1ed9t th\u1eddi gian sau \u0111\u00f3. Kh\u00f4ng kh\u00f3 hi\u1ec3u t\u1ea1i sao v\u00e0o th\u1eddi gian n\u00e0y l\u1ea1i c\u00f3 s\u1ef1 b\u00f9ng n\u1ed5 v\u1ec1 vi\u1ec7c t\u00ecm hi\u1ec3u h\u1ecdc SQL \u1edf \u0111\u00e2u, v\u00e0 cho \u0111\u1ebfn hi\u1ec7n t\u1ea1i l\u01b0\u1ee3t truy c\u1eadp v\u00e0o c\u00e1c t\u00e0i li\u1ec7u SQL server v\u1eabn l\u00e0 r\u1ea5t l\u1edbn.\r\n&gt;&gt;&gt;M\u1eddi b\u1ea1n tham kh\u1ea3o th\u00eam: SQL l\u00e0 g\u00ec? T\u1ea1i sao b\u1ea1n n\u00ean h\u1ecdc ph\u01b0\u01a1ng ph\u00e1p l\u1eadp tr\u00ecnh SQL?\r\nM\u1ed9t s\u1ed1 c\u00e2u l\u1ec7nh ng\u00f4n ng\u1eef SQL th\u01b0\u1eddng s\u1eed d\u1ee5ng\u00a0\r\nD\u01b0\u1edbi \u0111\u00e2y l\u00e0 m\u1ed9t s\u1ed1 c\u00e2u l\u1ec7nh th\u01b0\u1eddng \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng b\u00ean trong ng\u00f4n ng\u1eef SQL. N\u1ebfu nh\u01b0 b\u1ea1n mu\u1ed1n n\u1eafm r\u00f5 th\u00eam SQL la gi, ch\u1eafc ch\u1eafn b\u1ea1n kh\u00f4ng th\u1ec3 b\u1ecf qua nh\u1eefng th\u00f4ng tin d\u01b0\u1edbi \u0111\u00e2y.\r\n\r\nNg\u00f4n ng\u1eef \u0111i\u1ec1u khi\u1ec3n d\u1eef li\u1ec7u DCL\r\nDCL c\u1ee7a ng\u00f4n ng\u1eef SQL s\u1ebd g\u1ed3m c\u00f3 nh\u1eefng l\u1ec7nh sau:\r\nGRANT: \u0110\u00e2y l\u00e0 l\u1ec7nh \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng khi mu\u1ed1n trao quy\u1ec1n cho ng\u01b0\u1eddi d\u00f9ng\r\nREVOKE: \u0110\u00e2y l\u00e0 l\u1ec7nh \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng khi mu\u1ed1n thu h\u1ed3i l\u1ea1i quy\u1ec1n \u0111\u00e3 trao cho ng\u01b0\u1eddi s\u1eed d\u1ee5ng.\r\n\r\nNg\u00f4n ng\u1eef s\u1eed d\u1ee5ng thao t\u00e1c d\u1eef li\u1ec7u DML c\u1ee7a ng\u00f4n ng\u1eef SQL\r\nNh\u1eafc \u0111\u1ebfn thao t\u00e1c d\u1eef li\u1ec7u tr\u00ean DML hay c\u00f2n bi\u1ebft \u0111\u1ebfn l\u00e0 Data Manipulation Language, ch\u1eafc ch\u1eafn kh\u00f4ng th\u1ec3 b\u1ecf qua m\u1ed9t s\u1ed1 l\u1ec7nh sau:\r\nSELECT: \u0110\u00e2y l\u00e0 l\u1ec7nh th\u01b0\u1eddng \u0111\u01b0\u1ee3c d\u00f9ng khi mu\u1ed1n l\u1ea5y m\u1ed9t ho\u1eb7c m\u1ed9t v\u00e0i b\u1ea3n ghi nh\u1ea5t \u0111\u1ecbnh, c\u00f3 t\u1eeb m\u1ed9t ho\u1eb7c nhi\u1ec1u b\u1ea3ng kh\u00e1c nhau.\r\nINSERT: \u0110\u01b0\u1ee3c s\u1eed d\u1ee5ng khi b\u1ea1n mu\u1ed1n t\u1ea1o n\u00ean m\u1ed9t b\u1ea3n ghi\r\nUPDATE: L\u1ec7nh n\u00e0y s\u1ebd \u0111\u01b0\u1ee3c th\u1ef1c hi\u1ec7n n\u1ebfu b\u1ea1n mu\u1ed1n ch\u1ec9nh s\u1eeda m\u1ed9t b\u1ea3n ghi\r\nDELETE: \u0110\u00e2y l\u00e0 l\u1ec7nh \u0111\u01b0\u1ee3c nhi\u1ec1u ng\u01b0\u1eddi bi\u1ebft t\u1edbi, n\u00f3 \u0111\u01b0\u1ee3c d\u00f9ng n\u1ebfu b\u1ea1n mu\u1ed1n x\u00f3a b\u1ea3n ghi.\r\n\r\n\r\n\r\nNg\u00f4n ng\u1eef DDL\r\nDDL l\u00e0 vi\u1ebft t\u1eaft c\u1ee7a t\u1eeb Data Definition Language. C\u1ee5m n\u00e0y g\u1ed3m c\u00f3 c\u00e1c l\u1ec7nh nh\u01b0 sau:\r\nCREATE: Gi\u00fap t\u1ea1o ra m\u1ed9t b\u1ea3ng m\u1edbi, m\u1ed9t view m\u1edbi c\u1ee7a m\u1ed9t b\u1ea3ng ho\u1eb7c l\u00e0 c\u1ee7a c\u00e1c \u0111\u1ed1i t\u01b0\u1ee3ng kh\u00e1c nhau trong c\u00f9ng m\u1ed9t Database.\r\nALTER: \u0110\u01b0\u1ee3c s\u1eed d\u1ee5ng khi mu\u1ed1n s\u1eeda \u0111\u1ed5i \u0111\u1ed1i t\u01b0\u1ee3ng khi \u0111\u00e3 t\u1ed3n t\u1ea1i b\u00ean trong m\u1ed9t Database.\r\nDROP: L\u1ec7nh n\u00e0y \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng n\u1ebfu b\u1ea1n mu\u1ed1n x\u00f3a b\u1ea3ng, x\u00f3a view c\u1ee7a m\u1ed9t b\u1ea3n ho\u1eb7c l\u00e0 c\u1ee7a m\u1ed9t \u0111\u1ed1i t\u01b0\u1ee3ng kh\u00e1c b\u00ean trong Database \u0111\u00f3.\r\n\r\nM\u1ed9t s\u1ed1 c\u00fa ph\u00e1p truy v\u1ea5n th\u01b0\u1eddng s\u1eed d\u1ee5ng trong ng\u00f4n ng\u1eef SQL\r\nThu\u1eadt to\u00e1n s\u1eed d\u1ee5ng m\u1ec7nh \u0111\u1ec1 AND OR\r\nV\u1edbi thu\u1eadt to\u00e1n n\u00e0y, b\u1ea1n c\u1ea7n ph\u1ea3i k\u1ebft h\u1ee3p nhi\u1ec1u \u0111i\u1ec1u ki\u1ec7n kh\u00e1c nhau trong ng\u00f4n ng\u1eef SQL. \u0110\u00e2y l\u00e0 ch\u1ee9c n\u0103ng ch\u00ednh c\u1ee7a m\u1ec7nh \u0111\u1ec1 n\u00e0y.\r\nC\u00fa ph\u00e1p m\u00e0 b\u1ea1n c\u1ea7n t\u1ea1o:\r\nB\u01b0\u1edbc 1: SELECT cot1, cot2, cotN\r\nB\u01b0\u1edbc 2: FROM ten_bang\r\nB\u01b0\u1edbc 3: WHERE [dieu_kien_1] AND [dieu_kien_2]\u2026AND [dieu_kien_N];\r\n\r\nC\u00fa ph\u00e1p s\u1eed d\u1ee5ng m\u1ec7nh \u0111\u1ec1 WHERE\r\nM\u1ec7nh \u0111\u1ec1 n\u00e0y \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng gi\u00fap x\u00e1c \u0111\u1ecbnh \u0111i\u1ec1u ki\u1ec7n khi l\u1ea5y m\u1ed9t s\u1ed1 d\u1eef li\u1ec7u \u1edf b\u00ean trong b\u1ea3ng. C\u00fa ph\u00e1p c\u1ee7a ch\u00fang bao g\u1ed3m:\u00a0\r\nB\u01b0\u1edbc 1: SELECT cot1, cot2, cotN\r\nB\u01b0\u1edbc 2: FROM ten_bang\r\nB\u01b0\u1edbc 3: WHERE [dieu_kien]\r\n\r\nM\u1ec7nh \u0111\u1ec1 Distinct\r\nB\u01b0\u1edbc 1: SELECT DISTINCT cot1, cot2, \u2026cotN\r\nB\u01b0\u1edbc 2: FROM ten_bang\r\nB\u01b0\u1edbc 3: WHERE [dieu_kien]\r\n\r\nM\u1ec7nh \u0111\u1ec1 Group By\r\nC\u00fa ph\u00e1p c\u1ee7a m\u1ec7nh \u0111\u1ec1 n\u00e0y khi d\u00f9ng trong ng\u00f4n ng\u1eef SQL c\u00f3 ph\u1ea7n ph\u1ee9c t\u1ea1p h\u01a1n, tuy nhi\u00ean v\u1eabn d\u1ec5 d\u00e0ng \u0111\u1ec3 b\u1ea1n c\u00f3 th\u1ec3 hi\u1ec3u v\u00e0 \u00e1p d\u1ee5ng nhanh ch\u00f3ng:\r\nB\u01b0\u1edbc 1: SELECT cot1, cot2\r\nB\u01b0\u1edbc 2: FROM ten_bang\r\nB\u01b0\u1edbc 3: WHERE [dieu_kien]\r\nB\u01b0\u1edbc 4: GROUP BY cot1, cot2\r\nB\u01b0\u1edbc 5: ORDER BY cot1, cot2\r\n\r\nM\u1ec7nh \u0111\u1ec1 Order By\r\nTh\u00f4ng tin v\u1ec1 ng\u00f4n ng\u1eef SQL trong m\u1ec7nh \u0111\u1ec1 Order By \u0111\u01b0\u1ee3c mang \u0111\u1ebfn nh\u01b0 sau:\r\nB\u01b0\u1edbc 1: SELECT danh_sach_cot\r\nB\u01b0\u1edbc 2: FROM ten_bang\r\nB\u01b0\u1edbc 3: [WHERE dieu_kien]\r\nB\u01b0\u1edbc 4: [ORDER BY cot1, cot2, \u2026cotN] [ASC | DESC];\r\n\r\nTruy v\u1ea5n Select\r\n\u0110\u1ed1i v\u1edbi truy v\u1ea5n n\u00e0y, n\u1ebfu b\u1ea1n mu\u1ed1n x\u00e1c \u0111\u1ecbnh c\u00e1c c\u1ed9t c\u00f3 gi\u00e1 tr\u1ecb mu\u1ed1n l\u1ea5y, b\u1ea1n nh\u1eadp nh\u01b0 sau: SELECT cot1, cot2, cotN FROM ten_bang;\r\nC\u00f2n n\u1ebfu b\u1ea1n mu\u1ed1n x\u00e1c \u0111\u1ecbnh \u0111\u01b0\u1ee3c thao t\u00e1c c\u1ee7a t\u1ea5t c\u1ea3 c\u00e1c c\u1ed9t, b\u1ea1n s\u1ebd nh\u1eadp nh\u01b0 sau: SELECT * FROM ten_bang;\r\n\r\nTruy v\u1ea5n Insert\r\nC\u00fa ph\u00e1p \u0111\u1ec3 x\u00e1c \u0111\u1ecbnh \u0111\u01b0\u1ee3c c\u1ed9t ch\u00e8n d\u1eef li\u1ec7u l\u00e0\u201d\u00a0\r\nINSERT INTO TABLE_TEN (cot1, cot2, cot3, \u2026. CotN)\r\nVALUES (giaitri1, giaitri2, giaitri3, \u2026giatriN)\r\nThao t\u00e1c \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng tr\u00ean t\u1ea5t c\u1ea3 c\u00e1c c\u1ed9t c\u00f3 trong b\u1ea3ng l\u00e0:\r\nINSERT INTO TABLE_TEN VALUES (giaitri1,giaitri2,giaitri3,\u2026giaitriN)\r\n\r\nTruy v\u1ea5n Update - SQL l\u00e0 g\u00ec?\r\nNh\u1eafc \u0111\u1ebfn truy v\u1ea5n Update, c\u00fa ph\u00e1p \u0111\u1ec3 ch\u00e8n \u0111\u1ed1i v\u1edbi ng\u00f4n ng\u1eef SQL c\u0169ng kh\u00f4ng g\u00e2y ra nhi\u1ec1u kh\u00f3 kh\u0103n. B\u1ea1n c\u00f3 th\u1ec3 t\u00ecm hi\u1ec3u ngay nh\u01b0 sau:\r\nB\u01b0\u1edbc 1: UPDATE: ten_bang\r\nB\u01b0\u1edbc 2: SET cot1 = giaitri1, cot2 = giaitri2, cotN = giaitriN\r\nB\u01b0\u1edbc 3: WHERE [dieu_kien]\r\n\r\n\r\n\r\nTr\u00ean \u0111\u00e2y l\u00e0 nh\u1eefng th\u00f4ng tin m\u00e0 ch\u00fang t\u00f4i mang \u0111\u1ebfn cho b\u1ea1n \u0111\u1ecdc v\u1ec1 ng\u00f4n ng\u1eef SQL, ngo\u00e0i ra gi\u1edbi thi\u1ec7u cho b\u1ea1n m\u1ed9t s\u1ed1 l\u1ec7nh, truy v\u1ea5n hay g\u1eb7p \u0111\u1ec3 b\u1ea1n c\u00f3 th\u1ec3 \u00e1p d\u1ee5ng. N\u1ebfu b\u1ea1n th\u1ea5y nh\u1eefng chia s\u1ebb n\u00e0y th\u00fa v\u1ecb v\u00e0 b\u1ed5 \u00edch, h\u00e3y gi\u00fap ch\u00fang t\u00f4i chia s\u1ebb r\u1ed9ng r\u00e3i t\u1edbi nhi\u1ec1u b\u1ea1n \u0111\u1ecdc kh\u00e1c h\u01a1n n\u1eefa nh\u00e9. Ngo\u00e0i ra, \u0111\u1eebng qu\u00ean tham kh\u1ea3o th\u00eam nh\u1eefng th\u00f4ng tin b\u1ed5 \u00edch kh\u00e1c t\u1eeb Teky, v\u00ed d\u1ee5 b\u00e0i vi\u1ebft t\u00ecm hi\u1ec3u v\u1ec1 Business Analyst l\u00e0 g\u00ec b\u1ea1n nh\u00e9. Ch\u1eafc ch\u1eafn b\u1ea1n s\u1ebd kh\u00f4ng th\u1ea5t v\u1ecdng v\u1edbi nh\u1eefng th\u00f4ng tin m\u00e0 m\u00ecnh nh\u1eadn \u0111\u01b0\u1ee3c \u0111\u00e2u.\r\n&nbsp;\r\nH\u1ecdc Vi\u1ec7n C\u00f4ng Ngh\u1ec7 Teky - N\u01a1i con ph\u00e1t tri\u1ec3n k\u1ef9 n\u0103ng, t\u01b0 duy l\u1eadp tr\u00ecnh\u00a0\r\nhttps:\/\/youtu.be\/kGgr0XJAxFM\r\n\r\nTEKY l\u00e0 H\u1ecdc vi\u1ec7n s\u00e1ng t\u1ea1o c\u00f4ng ngh\u1ec7 v\u1edbi ch\u01b0\u01a1ng tr\u00ecnh gi\u1ea3ng d\u1ea1y STEAM (Science \u2013 Technology \u2013 Engineering \u2013 Art \u2013 Mathematics) theo chu\u1ea9n M\u1ef9 \u0111\u1ea7u ti\u00ean t\u1ea1i Vi\u1ec7t Nam d\u00e0nh cho tr\u1ebb em t\u1eeb 4 \u0111\u1ebfn 18 tu\u1ed5i.\r\n\r\n\u0110\u01b0\u1ee3c th\u00e0nh l\u1eadp v\u00e0o th\u00e1ng 6 n\u0103m 2016, TEKY quy\u1ebft t\u00e2m th\u1ef1c hi\u1ec7n s\u1ee9 m\u1ec7nh mang \u0111\u1ebfn cho th\u1ebf h\u1ec7 tr\u1ebb Vi\u1ec7t Nam ki\u1ebfn th\u1ee9c to\u00e0n di\u1ec7n v\u1ec1 STEAM, \u0111\u1eb7c bi\u1ec7t l\u00e0 c\u00e1c t\u01b0 duy c\u00f4ng ngh\u1ec7, khoa h\u1ecdc m\u00e1y t\u00ednh v\u00e0 k\u1ef9 n\u0103ng th\u1ebf k\u1ef7 21 \u2013 4Cs (Critical Thinking: T\u01b0 duy ph\u1ea3n bi\u1ec7n \u2013 Communication: Giao ti\u1ebfp \u2013 Creativity: S\u00e1ng t\u1ea1o \u2013 Collaboration: L\u00e0m vi\u1ec7c nh\u00f3m).\r\n\r\n\r\n\u0110\u00e2y l\u00e0 ch\u01b0\u01a1ng tr\u00ecnh kh\u00f4ng ch\u1ec9 trang b\u1ecb ki\u1ebfn th\u1ee9c l\u1eadp tr\u00ecnh m\u00e0 c\u00f2n r\u00e8n luy\u1ec7n nh\u00f3m k\u1ef9 n\u0103ng 4Cs. Tr\u1ebb s\u1ebd \u0111\u01b0\u1ee3c:\r\n\r\n \t\u00a0H\u1ecdc t\u01b0 duy ph\u1ea3n bi\u1ec7n th\u00f4ng qua vi\u1ec7c ph\u00e2n t\u00edch c\u00e1c v\u1ea5n \u0111\u1ec1.\r\n \t\u00a0H\u1ecdc t\u00ednh s\u00e1ng t\u1ea1o t\u01b0 duy Logic th\u00f4ng qua vi\u1ec7c l\u1eafp \u0111\u1eb7t v\u00e0 l\u1eadp tr\u00ecnh robot th \u00f4ng qua c\u00e1c m\u00f4 h\u00ecnh Lego Mindstorm, app tr\u00f2 ch\u01a1i. Gi\u00fap con h\u1ecdc gi\u1ecfi m\u00f4n To\u00e1n tr\u00ean l\u1edbp\r\n \t\u00a0K\u1ef9 n\u0103ng h\u1ee3p t\u00e1c th\u00f4ng qua c\u00e1c tr\u00f2 ch\u01a1i team-building, c\u00e1c d\u1ef1 \u00e1n nh\u00f3m tr\u00ean l\u1edbp.\r\n \t\u00a0Ph\u00e1t huy kh\u1ea3 n\u0103ng giao ti\u1ebfp hi\u1ec7u qu\u1ea3 b\u1eb1ng nhi\u1ec1u b\u00e0i t\u1eadp v\u00e0 ho\u1ea1t \u0111\u1ed9ng h\u1ea5p d\u1eabn.\r\n\r\n\r\n\r\nC\u00e1c b\u1ed9 m\u00f4n gi\u1ea3ng d\u1ea1y t\u1ea1i Teky g\u1ed3m: L\u1eadp tr\u00ecnh v\u00e0 ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng, l\u1eadp tr\u00ecnh game, l\u1eadp tr\u00ecnh web v\u1edbi python \u00a0L\u1eadp tr\u00ecnh Scratch Robotics Engineering, C\u00f4ng ngh\u1ec7 3D v\u00e0 MultiMedia. Ch\u00fang t\u00f4i tin r\u1eb1ng tr\u1ebb em Vi\u1ec7t Nam c\u00f3 c\u01a1 h\u1ed9i ph\u00e1t tri\u1ec3n m\u1ea1nh m\u1ebd trong m\u1ed9t n\u1ec1n kinh t\u1ebf s\u1ed1 v\u00e0 c\u1ea7n \u0111\u01b0\u1ee3c trang b\u1ecb s\u1eb5n s\u00e0ng \u0111\u1ec3 tr\u1edf th\u00e0nh nh\u1eefng doanh nh\u00e2n c\u00f4ng ngh\u1ec7 trong t\u01b0\u01a1ng lai.\r\nLi\u00ean h\u1ec7 ngay h\u1ecdc vi\u1ec7n c\u00f4ng ngh\u1ec7 s\u00e1ng t\u1ea1o TEKY \u0111\u1ec3 \u0111\u01b0\u1ee3c t\u01b0 v\u1ea5n kh\u00f3a h\u1ecdc:\r\n\r\n \tCam k\u00eat 7 tu\u1ed5i c\u00f3 th\u1ec3 l\u1eadp tr\u00ecnh\r\n \tTop 10 d\u1ef1 \u00e1n gi\u00e1o d\u1ee5c c\u00f3 t\u1ea7m \u1ea3nh h\u01b0\u1edfng nh\u1ea5t \u0110\u00f4ng Nam \u00c1 2017 &amp; 2018\r\n \tTop 3 D\u1ef1 \u00e1n xu\u1ea5t s\u1eafc nh\u1ea5t, NextGen \u2013 Th\u1ee5y S\u0129\r\n \t\u00a0Hotline H\u00e0 N\u1ed9i: 024-7109-6668 | 0975-241-015\r\n \t\u00a0Hotline H\u1ed3 Ch\u00ed Minh: 028-7109 9948 | 097-900-8642\r\n\r\nWebsite https:\/\/teky.edu.vn | Email: support@teky.edu.vn |\r\n\r\nXem th\u00eam:\u00a0\r\n\r\n \tSQL l\u00e0 g\u00ec? T\u1ea1i sao b\u1ea1n n\u00ean h\u1ecdc ph\u01b0\u01a1ng ph\u00e1p l\u1eadp tr\u00ecnh SQL?\r\n \tC\u00e2u l\u1ec7nh SQL c\u01a1 b\u1ea3n - H\u1ecdc IT kh\u00f4ng kh\u00f3 c\u00f9ng Teky\r\n \tSQL Injection l\u00e0 g\u00ec? 3 c\u00e1ch ph\u00f2ng ch\u1ed1ng SQL Injection hi\u1ec7u qu\u1ea3 nh\u1ea5t\r\n \tB\u00e9 H\u1ecdc L\u1eadp Tr\u00ecnh \u2013 7 Quan Ni\u1ec7m Sai L\u1ea7m Ba M\u1eb9 Th\u01b0\u1eddng M\u1eafc Ph\u1ea3i\r\n","publisher":{"@id":"#Publisher","@type":"Organization","name":"TEKY - H\u1ecdc vi\u1ec7n s\u00e1ng t\u1ea1o c\u00f4ng ngh\u1ec7","logo":{"@type":"ImageObject","url":"https:\/\/teky.edu.vn\/blog\/wp-content\/uploads\/2023\/07\/teky-logo.png"}},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/teky.edu.vn\/blog\/ngon-ngu-sql\/","breadcrumb":{"@id":"#Breadcrumb"}},"author":{"@type":"Person","name":"Kh\u00e1nh Kim","url":"https:\/\/teky.edu.vn\/blog\/author\/kimkhanh\/"},"image":{"@type":"ImageObject","url":"https:\/\/teky.edu.vn\/blog\/wp-content\/uploads\/2021\/07\/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg","width":1200,"height":400}}</script>
+		<div id="share-buttons-bottom" class="share-buttons share-buttons-bottom">
+			<div class="share-links  icons-only share-rounded">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL&#038;url=https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">Twitter</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://teky.edu.vn/blog/ngon-ngu-sql/&#038;title=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="https://pinterest.com/pin/create/button/?url=https://teky.edu.vn/blog/ngon-ngu-sql/&#038;description=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL&#038;media=https://teky.edu.vn/blog/wp-content/uploads/2021/07/chia-se-ve-ngon-ngu-sql-cho-ban-doc.jpg" rel="external noopener nofollow" title="Pinterest" target="_blank" class="pinterest-share-btn " data-raw="https://pinterest.com/pin/create/button/?url={post_link}&amp;description={post_title}&amp;media={post_img}">
+					<span class="share-btn-icon tie-icon-pinterest"></span> <span class="screen-reader-text">Pinterest</span>
+				</a>
+				<a href="mailto:?subject=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL&#038;body=https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="Chia sẻ qua Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Chia sẻ qua Email</span>
+				</a>
+				<a href="#" rel="external noopener nofollow" title="In" target="_blank" class="print-share-btn " data-raw="#">
+					<span class="share-btn-icon tie-icon-print"></span> <span class="screen-reader-text">In</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		
+	</article><!-- #the-post /-->
+
+	
+	<div class="post-components">
+
+		
+		<div class="about-author container-wrapper about-author-10">
+
+								<div class="author-avatar">
+						<a href="https://teky.edu.vn/blog/author/kimkhanh/">
+							<img alt='Photo of Khánh Kim' src='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=180&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ab08c4bbf1d0787f26b32ab04d2cb7e329a3a082ea3dcb6ba78fb27076b856a9?s=360&#038;d=mm&#038;r=g 2x' class='avatar avatar-180 photo' height='180' width='180' loading='lazy' decoding='async'/>						</a>
+					</div><!-- .author-avatar /-->
+					
+			<div class="author-info">
+
+											<h3 class="author-name"><a href="https://teky.edu.vn/blog/author/kimkhanh/">Khánh Kim</a></h3>
+						
+				<div class="author-bio">
+									</div><!-- .author-bio /-->
+
+				<ul class="social-icons"></ul>			</div><!-- .author-info /-->
+			<div class="clearfix"></div>
+		</div><!-- .about-author /-->
+		
+	
+
+				<div id="related-posts" class="container-wrapper has-extra-post">
+
+					<div class="mag-box-title the-global-title">
+						<h3>Những bài viết liên quan</h3>
+					</div>
+
+					<div class="related-posts-list">
+
+					
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="Cách chụp ảnh thẻ bằng điện thoại vô cùng chuyên nghiệp" href="https://teky.edu.vn/blog/cach-chup-anh-the-bang-dien-thoai/" class="post-thumb"><img width="390" height="220" src="https://teky.edu.vn/blog/wp-content/uploads/2023/04/chup-anh-the-bang-dien-thoai-18.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="cách chụp ảnh thẻ bằng điện thoại" decoding="async" loading="lazy" srcset="https://teky.edu.vn/blog/wp-content/uploads/2023/04/chup-anh-the-bang-dien-thoai-18.jpg 800w, https://teky.edu.vn/blog/wp-content/uploads/2023/04/chup-anh-the-bang-dien-thoai-18-400x225.jpg 400w, https://teky.edu.vn/blog/wp-content/uploads/2023/04/chup-anh-the-bang-dien-thoai-18-768x432.jpg 768w" sizes="auto, (max-width: 390px) 100vw, 390px" /></a>
+								<h3 class="post-title"><a href="https://teky.edu.vn/blog/cach-chup-anh-the-bang-dien-thoai/">Cách chụp ảnh thẻ bằng điện thoại vô cùng chuyên nghiệp</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">20/10/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="Cách kết nối bluetooth trên laptop win 7 nhanh chóng bạn cần biết" href="https://teky.edu.vn/blog/cach-ket-noi-bluetooth-tren-laptop-win-7/" class="post-thumb"><img width="358" height="220" src="https://teky.edu.vn/blog/wp-content/uploads/2022/02/lam-sao-de-co-cach-ket-noi-bluetooth-tren-laptop-win-7.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Làm sao để có cách kết nối bluetooth trên laptop win 7" decoding="async" loading="lazy" srcset="https://teky.edu.vn/blog/wp-content/uploads/2022/02/lam-sao-de-co-cach-ket-noi-bluetooth-tren-laptop-win-7.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2022/02/lam-sao-de-co-cach-ket-noi-bluetooth-tren-laptop-win-7-400x246.jpg 400w" sizes="auto, (max-width: 358px) 100vw, 358px" /></a>
+								<h3 class="post-title"><a href="https://teky.edu.vn/blog/cach-ket-noi-bluetooth-tren-laptop-win-7/">Cách kết nối bluetooth trên laptop win 7 nhanh chóng bạn cần biết</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">22/10/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="Framework là gì? Những điều bạn cần biết về Framework" href="https://teky.edu.vn/blog/framework-la-gi/" class="post-thumb"><img width="358" height="220" src="https://teky.edu.vn/blog/wp-content/uploads/2021/07/Framework-la-gi.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Framework là gì?" decoding="async" loading="lazy" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/07/Framework-la-gi.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/07/Framework-la-gi-400x246.jpg 400w" sizes="auto, (max-width: 358px) 100vw, 358px" /></a>
+								<h3 class="post-title"><a href="https://teky.edu.vn/blog/framework-la-gi/">Framework là gì? Những điều bạn cần biết về Framework</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">23/10/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="Ở đâu có khóa học truyền thông đa phương tiện cho trẻ em Bình Dương?" href="https://teky.edu.vn/blog/khoa-hoc-truyen-thong-da-phuong-tien-cho-tre-em-binh-duong/" class="post-thumb"><img width="358" height="220" src="https://teky.edu.vn/blog/wp-content/uploads/2021/11/khoa-hoc-cho-tre-nhieu-do-tuoi.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Khóa học cho trẻ nhiều độ tuổi" decoding="async" loading="lazy" srcset="https://teky.edu.vn/blog/wp-content/uploads/2021/11/khoa-hoc-cho-tre-nhieu-do-tuoi.jpg 650w, https://teky.edu.vn/blog/wp-content/uploads/2021/11/khoa-hoc-cho-tre-nhieu-do-tuoi-400x246.jpg 400w" sizes="auto, (max-width: 358px) 100vw, 358px" /></a>
+								<h3 class="post-title"><a href="https://teky.edu.vn/blog/khoa-hoc-truyen-thong-da-phuong-tien-cho-tre-em-binh-duong/">Ở đâu có khóa học truyền thông đa phương tiện cho trẻ em Bình Dương?</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">04/10/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+					</div><!-- .related-posts-list /-->
+				</div><!-- #related-posts /-->
+
+				<div id="comments" class="comments-area">
+
+		
+
+		<div id="add-comment-block" class="container-wrapper">	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title the-global-title">Để lại một bình luận <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/ngon-ngu-sql/#respond" style="display:none;">Hủy</a></small></h3><form action="https://teky.edu.vn/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được hiển thị công khai.</span> <span class="required-field-message">Các trường bắt buộc được đánh dấu <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Bình luận <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Tên <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required /></p>
+<p class="comment-form-url"><label for="url">Trang web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Gửi bình luận" /> <input type='hidden' name='comment_post_ID' value='7957' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	</div><!-- #add-comment-block /-->
+	</div><!-- .comments-area -->
+
+
+	</div><!-- .post-components /-->
+
+	
+</div><!-- .main-content -->
+
+
+	<div id="check-also-box" class="container-wrapper check-also-right">
+
+		<div class="widget-title the-global-title">
+			<div class="the-subtitle">Xem thêm</div>
+
+			<a href="#" id="check-also-close" class="remove">
+				<span class="screen-reader-text">Close</span>
+			</a>
+		</div>
+
+		<div class="widget posts-list-big-first has-first-big-post">
+			<ul class="posts-list-items">
+
+			
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Cách sử dụng máy tính cơ bản &#8211; Tối đa hóa hiệu suất làm việc" href="https://teky.edu.vn/blog/cach-su-dung-may-tinh/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-28">IT - Lập trình</span></span><img width="367" height="220" src="https://teky.edu.vn/blog/wp-content/uploads/2023/05/cach-su-dung-may-tinh.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Cách sử dụng máy tính" decoding="async" loading="lazy" srcset="https://teky.edu.vn/blog/wp-content/uploads/2023/05/cach-su-dung-may-tinh.jpg 800w, https://teky.edu.vn/blog/wp-content/uploads/2023/05/cach-su-dung-may-tinh-400x240.jpg 400w, https://teky.edu.vn/blog/wp-content/uploads/2023/05/cach-su-dung-may-tinh-768x461.jpg 768w" sizes="auto, (max-width: 367px) 100vw, 367px" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://teky.edu.vn/blog/cach-su-dung-may-tinh/">Cách sử dụng máy tính cơ bản &#8211; Tối đa hóa hiệu suất làm việc</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">09/10/2023</span>		</div>
+	</div>
+</li>
+
+			</ul><!-- .related-posts-list /-->
+		</div>
+	</div><!-- #related-posts /-->
+
+	
+	<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
+		<div class="theiaStickySidebar">
+			
+		<div id="recent-posts-3" class="container-wrapper widget widget_recent_entries">
+		<div class="widget-title the-global-title"><div class="the-subtitle">Bài viết mới nhất<span class="widget-title-icon tie-icon"></span></div></div>
+		<ul>
+											<li>
+					<a href="https://teky.edu.vn/blog/ebook-hieu-dung-ve-roi-loan-choi-game/">EBOOK: Hiểu đúng về rối loạn chơi game ở trẻ em &#8211; Cẩm nang khoa học giúp phụ huynh đồng hành cùng con trong thời đại số</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/nghien-game-o-tre-em-tu-dau-hieu-nhan-biet-den-lo-trinh-cai-nghien-hieu-qua-cho-cha-me/">Nghiện game ở trẻ em: từ dấu hiệu nhận biết đến lộ trình cai nghiện hiệu quả cho cha mẹ</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/cuoi-tuan-tai-teky-cau-giay-hoc-cong-nghe-sang-tao-chu-dong/">Cuối tuần tại Teky Cầu Giấy &#8211; Học công nghệ sáng tạo, chủ động</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/khi-be-lam-game-bien-dong-code-thanh-cu-nem-ghi-diem/">Khi bé làm game biến dòng code thành cú ném ghi điểm</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/lap-trinh-game-voi-code-kitten-hanh-trinh-cong-nghe-cua-bui-anh-vu/">Lập Trình Game Với Code Kitten – Hành Trình Công Nghệ Của Bùi Anh Vũ</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/steam-day-cung-teky-tai-truong-tieu-hoc-phan-dinh-giot/">STEAM Day cùng Teky tại trường Tiểu học Phan Đình Giót</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/tu-nhung-buoi-hoc-stem-dau-tien-den-san-choi-wro-quoc-te/">Từ những buổi học STEM đầu tiên đến sân chơi WRO quốc tế</a>
+									</li>
+											<li>
+					<a href="https://teky.edu.vn/blog/gamma-ai-ky-nang-thuyet-trinh-cong-nghe-co-dang-giup-tre-tu-tin-hon/">Gamma AI &#038; Kỹ năng thuyết trình: Công nghệ có đang giúp trẻ tự tin hơn?</a>
+									</li>
+					</ul>
+
+		<div class="clearfix"></div></div><!-- .widget /--><div id="media_image-5" class="container-wrapper widget widget_media_image"><div class="widget-title the-global-title"><div class="the-subtitle">Trải nghiệm lập trình<span class="widget-title-icon tie-icon"></span></div></div><a href="http://hoclaptrinhmienphi.teky.vn/1hhoclaptrinh"><img width="600" height="900" src="https://teky.edu.vn/blog/wp-content/uploads/2025/04/Trai-nghiem-lap-trinh-banner-co-dinh-ben-phai.png" class="image wp-image-24862 sg-popup-id-22008 attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Trải nghiệm lập trình" decoding="async" loading="lazy" /></a><div class="clearfix"></div></div><!-- .widget /-->		</div><!-- .theiaStickySidebar /-->
+	</aside><!-- .sidebar /-->
+	</div><!-- .main-content-row /--></div><!-- #content /-->
+<footer id="footer" class="site-footer dark-skin dark-widgetized-area">
+
+	
+			<div id="footer-widgets-container">
+				<div class="container">
+					
+		<div class="footer-widget-area ">
+			<div class="tie-row">
+
+									<div class="tie-col-md-3 normal-side">
+						<div id="author-bio-widget-2" class="container-wrapper widget aboutme-widget">
+				<div class="about-author about-content-wrapper"><img alt="" src="https://teky.edu.vn/blog/wp-content/uploads/2023/07/logo-teky-w.png" class="about-author-img" width="280" height="47">
+
+					<div class="aboutme-widget-content">TEKY là Học viện sáng tạo công nghệ với chương trình giảng dạy<b> STEAM (Science – Technology – Engineering – Art – Mathematics)</b> theo chuẩn Mỹ đầu tiên tại Việt Nam dành cho trẻ em từ 4 đến 18 tuổi.
+					</div>
+					<div class="clearfix"></div>
+			
+				</div><!-- .about-widget-content -->
+			<div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-2" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">Dành cho học sinh<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class="f-menu">
+ 	<li><a href="https://teky.edu.vn/">Chơi &amp; Xem</a></li>
+ 	<li><a href="https://teky.edu.vn/hoc/">Học</a></li>
+ 	<li><a href="https://teky.edu.vn/lam-game/">Làm Game/dự án</a></li>
+ 	<li><a href="https://teky.edu.vn/cong-dong/">Cộng đồng</a></li>
+ 	<li><a href="https://teky.edu.vn/doi-qua/">Đổi quà</a></li>
+ 	<li><a href="https://teky.edu.vn/login/">Hồ sơ của tôi</a></li>
+ 	<li><a href="https://teky.edu.vn/tro-giup/">Trợ giúp</a></li>
+</ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-3" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">Dành cho phụ huynh<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class="f-menu">
+ 	<li><a href="https://teky.edu.vn/phu-huynh/gioi-thieu/">Về TEKY</a></li>
+ 	<li><a href="https://teky.edu.vn/phu-huynh/tre-em-can-hoc-lap-trinh/">Giải pháp giáo dục</a></li>
+ 	<li><a href="https://teky.edu.vn/phu-huynh/khoa-hoc/">Khóa học</a></li>
+ 	<li><a href="https://teky.edu.vn/v2/tuyen-dung/">Tuyển dụng</a></li>
+ 	<li><a href="https://teky.edu.vn/blog/">Blog</a></li>
+ 	<li><a href="https://teky.edu.vn/lien-he/khieu-nai/">Khiếu nại</a></li>
+ 	<li><a href="https://teky.edu.vn/phu-huynh/lien-he/">Liên hệ</a></li>
+</ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-4" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">Thông tin liên hệ<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class="list-hotline">
+ 	<li><label class="hotline-label">Tổng đài:</label> <strong class="hotline-number">1900 3168</strong></li>
+ 	<li>Email: <strong>support</strong>@teky.edu.vn</li>
+ 	<li><strong class="d-block">Trụ sở chính Miền Bắc</strong> <span class="addres-name">Tầng 5, Tòa nhà Mac Plaza Phường Mộ Lao, Quận Hà Đông, Hà Nội</span></li>
+ 	<li><strong class="d-block">Trụ sở chính Miền Nam</strong> <span class="addres-name">152 Đ. Điện Biên Phủ, Phường 25, Bình Thạnh, Thành phố HCM</span></li>
+ 	<li><strong><a class="office-name" href="https://teky.edu.vn/phu-huynh/lien-he/">Danh sách toàn bộ học viện</a></strong></li>
+</ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+			</div><!-- .tie-row /-->
+		</div><!-- .footer-widget-area /-->
+
+						</div><!-- .container /-->
+			</div><!-- #Footer-widgets-container /-->
+			
+</footer><!-- #footer /-->
+
+
+		<div id="share-buttons-mobile" class="share-buttons share-buttons-mobile">
+			<div class="share-links  icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL&#038;url=https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">Twitter</span>
+				</a>
+				<a href="https://api.whatsapp.com/send?text=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL%20https://teky.edu.vn/blog/ngon-ngu-sql/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn " data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="screen-reader-text">WhatsApp</span>
+				</a>
+				<a href="https://telegram.me/share/url?url=https://teky.edu.vn/blog/ngon-ngu-sql/&text=Ng%C3%B4n%20ng%E1%BB%AF%20SQL%20l%C3%A0%20g%C3%AC%3F%20Gi%E1%BB%9Bi%20thi%E1%BB%87u%20m%E1%BB%99t%20s%E1%BB%91%20l%E1%BB%87nh%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20SQL" rel="external noopener nofollow" title="Telegram" target="_blank" class="telegram-share-btn " data-raw="https://telegram.me/share/url?url={post_link}&text={post_title}">
+					<span class="share-btn-icon tie-icon-paper-plane"></span> <span class="screen-reader-text">Telegram</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		<div class="mobile-share-buttons-spacer"></div>
+		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+			<span class="tie-icon-angle-up"></span>
+			<span class="screen-reader-text">Back to top button</span>
+		</a>
+	
+		</div><!-- #tie-wrapper /-->
+
+		
+	<aside class=" side-aside normal-side dark-skin dark-widgetized-area is-fullwidth appear-from-left" aria-label="Secondary Sidebar" style="visibility: hidden;">
+		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+
+			<a href="#" class="close-side-aside remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a><!-- .close-side-aside /-->
+
+
+			
+				<div id="mobile-container">
+
+											<div id="mobile-search">
+							<form role="search" method="get" class="search-form" action="https://teky.edu.vn/blog/">
+				<label>
+					<span class="screen-reader-text">Tìm kiếm cho:</span>
+					<input type="search" class="search-field" placeholder="Tìm kiếm &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Tìm kiếm" />
+			</form>							</div><!-- #mobile-search /-->
+						
+					<div id="mobile-menu" class="hide-menu-icons">
+											</div><!-- #mobile-menu /-->
+
+											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+							<ul></ul> 
+						</div><!-- #mobile-social-icons /-->
+						
+				</div><!-- #mobile-container /-->
+			
+
+			
+		</div><!-- .side-aside-wrapper /-->
+	</aside><!-- .side-aside /-->
+
+	
+	</div><!-- #tie-container /-->
+</div><!-- .background-overlay /-->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/blog\/*"},{"not":{"href_matches":["\/blog\/wp-*.php","\/blog\/wp-admin\/*","\/blog\/wp-content\/uploads\/*","\/blog\/wp-content\/*","\/blog\/wp-content\/plugins\/*","\/blog\/wp-content\/themes\/jannah-child\/*","\/blog\/wp-content\/themes\/jannah\/*","\/blog\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe013f3b9036195"></script>
+
+<div class="zalo-chat-widget" data-oaid="502206421677206484" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height=""></div>
+
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>					<div class="ez-toc-sticky ">
+						<div class="ez-toc-sticky-fixed hide ez-toc-sticky-grey">
+							<div class='ez-toc-sidebar'><div class="ez-toc-sticky-title-container">
+<p class="ez-toc-sticky-title" style="cursor:inherit">Nội dung </p>
+<a class="ez-toc-close-icon" href="#" onclick="ezTOC_hideBar(event)" aria-label="×"><span aria-hidden="true">×</span></a>
+</div>
+<div id="ez-toc-sticky-container" class="ez-toc-sticky-container ez-toc-sticky-v2_0_76 counter-flat ez-toc-sticky-toggle-counter">
+<nav class='ez-toc-sticky-toggle-direction'><ul class='ez-toc-sticky-list ez-toc-sticky-list-level-1 ' ><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#Ngon_ngu_SQL_la_gi" >Ngôn ngữ SQL là gì?</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#SQL_duoc_ap_dung_nhieu_o_dau" >SQL được áp dụng nhiều ở đâu?</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#Lich_su_hinh_thanh_ngon_ngu_SQL" >Lịch sử hình thành ngôn ngữ SQL</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Mot_so_cau_lenh_ngon_ngu_SQL_thuong_su_dung" >Một số câu lệnh ngôn ngữ SQL thường sử dụng </a><ul class='ez-toc-sticky-list-level-3' ><li class='ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-5" href="#Ngon_ngu_dieu_khien_du_lieu_DCL" >Ngôn ngữ điều khiển dữ liệu DCL</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-6" href="#Ngon_ngu_su_dung_thao_tac_du_lieu_DML_cua_ngon_ngu_SQL" >Ngôn ngữ sử dụng thao tác dữ liệu DML của ngôn ngữ SQL</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-7" href="#Ngon_ngu_DDL" >Ngôn ngữ DDL</a></li></ul></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-8" href="#Mot_so_cu_phap_truy_van_thuong_su_dung_trong_ngon_ngu_SQL" >Một số cú pháp truy vấn thường sử dụng trong ngôn ngữ SQL</a><ul class='ez-toc-sticky-list-level-3' ><li class='ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-9" href="#Thuat_toan_su_dung_menh_de_AND_OR" >Thuật toán sử dụng mệnh đề AND OR</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-10" href="#Cu_phap_su_dung_menh_de_WHERE" >Cú pháp sử dụng mệnh đề WHERE</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-11" href="#Menh_de_Distinct" >Mệnh đề Distinct</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-12" href="#Menh_de_Group_By" >Mệnh đề Group By</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-13" href="#Menh_de_Order_By" >Mệnh đề Order By</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-14" href="#Truy_van_Select" >Truy vấn Select</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-15" href="#Truy_van_Insert" >Truy vấn Insert</a></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-16" href="#Truy_van_Update_%E2%80%93_SQL_la_gi" >Truy vấn Update &#8211; SQL là gì?</a></li></ul></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-2'><a class="ez-toc-link ez-toc-heading-17" href="#Hoc_Vien_Cong_Nghe_Teky_%E2%80%93_Noi_con_phat_trien_ky_nang_tu_duy_lap_trinh" >Học Viện Công Nghệ Teky &#8211; Nơi con phát triển kỹ năng, tư duy lập trình </a><ul class='ez-toc-sticky-list-level-4' ><li class='ez-toc-sticky-heading-level-4'><ul class='ez-toc-sticky-list-level-4' ><li class='ez-toc-sticky-heading-level-4'><a class="ez-toc-link ez-toc-heading-18" href="#Day_la_chuong_trinh_khong_chi_trang_bi_kien_thuc_lap_trinh_ma_con_ren_luyen_nhom_ky_nang_4Cs_Tre_se_duoc" >Đây là chương trình không chỉ trang bị kiến thức lập trình mà còn rèn luyện nhóm kỹ năng 4Cs. Trẻ sẽ được:</a></li></ul></li><li class='ez-toc-sticky-page-1 ez-toc-sticky-heading-level-3'><a class="ez-toc-link ez-toc-heading-19" href="#Lien_he_ngay_hoc_vien_cong_nghe_sang_tao_TEKY_de_duoc_tu_van_khoa_hoc" >Liên hệ ngay học viện công nghệ sáng tạo TEKY để được tư vấn khóa học:</a></li></ul></li></ul></nav></div>
+</div>
+						</div>
+						<a class='ez-toc-open-icon' href='#' onclick='ezTOC_showBar(event)' >
+							<span class="arrow">&#8594;</span>
+							<span class="text">Nội dung</span>
+						</a>
+					</div>
+					<div id="reading-position-indicator"></div><div id="autocomplete-suggestions" class="autocomplete-suggestions"></div><div id="is-scroller-outer"><div id="is-scroller"></div></div><div id="fb-root"></div>		<div id="tie-popup-search-mobile" class="tie-popup tie-popup-search-wrap" style="display: none;">
+			<a href="#" class="tie-btn-close remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a>
+			<div class="popup-search-wrap-inner">
+
+				<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
+
+										<form method="get" class="tie-popup-search-form" action="https://teky.edu.vn/blog/">
+							<input class="tie-popup-search-input " inputmode="search" type="text" name="s" title="Tìm kiếm" autocomplete="off" placeholder="Tìm kiếm" />
+							<button class="tie-popup-search-submit" type="submit">
+								<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+								<span class="screen-reader-text">Tìm kiếm</span>
+							</button>
+						</form>
+						
+				</div><!-- .pop-up-live-search /-->
+
+			</div><!-- .popup-search-wrap-inner /-->
+		</div><!-- .tie-popup-search-wrap /-->
+		    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+        }
+        }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+        <div id='fb-pxl-ajax-code'></div><script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https:\/\/teky.edu.vn\/blog\/wp-admin\/admin-ajax.php","nonce":"55761778de"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/kk-star-ratings/src/core/public/js/kk-star-ratings.min.js?ver=5.4.10.2" id="kk-star-ratings-js"></script>
+<script type="text/javascript" id="ez-toc-scroll-scriptjs-js-extra">
+/* <![CDATA[ */
+var eztoc_smooth_local = {"scroll_offset":"30","add_request_uri":"","add_self_reference_link":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/assets/js/smooth_scroll.min.js?ver=2.0.76" id="ez-toc-scroll-scriptjs-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" id="ez-toc-js-cookie-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2" id="ez-toc-jquery-sticky-kit-js"></script>
+<script type="text/javascript" id="ez-toc-js-js-extra">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","scroll_offset":"30","fallbackIcon":"<span class=\"\"><span class=\"eztoc-hide\" style=\"display:none;\">Toggle<\/span><span class=\"ez-toc-icon-toggle-span\"><svg style=\"fill: #999;color:#999\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"><\/path><\/svg><svg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"><path d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"\/><\/svg><\/span><\/span>","chamomile_theme_is_on":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.76-1759132299" id="ez-toc-js-js"></script>
+<script type="text/javascript" id="ez-toc-sticky-js-extra">
+/* <![CDATA[ */
+var eztoc_sticky_local = {"close_on_link_click":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/plugins/easy-table-of-contents/assets/js/ez-toc-sticky.min.js?ver=2.0.76-1759132299" id="ez-toc-sticky-js"></script>
+<script type="text/javascript" id="tie-scripts-js-extra">
+/* <![CDATA[ */
+var tie = {"is_rtl":"","ajaxurl":"https:\/\/teky.edu.vn\/blog\/wp-admin\/admin-ajax.php","is_taqyeem_active":"","is_sticky_video":"1","mobile_menu_top":"","mobile_menu_active":"area_1","mobile_menu_parent":"","lightbox_all":"true","lightbox_gallery":"true","lightbox_skin":"dark","lightbox_thumb":"horizontal","lightbox_arrows":"true","is_singular":"1","autoload_posts":"","reading_indicator":"true","lazyload":"","select_share":"true","select_share_twitter":"","select_share_facebook":"","select_share_linkedin":"","select_share_email":"","facebook_app_id":"5303202981","twitter_username":"","responsive_tables":"true","ad_blocker_detector":"","sticky_behavior":"default","sticky_desktop":"","sticky_mobile":"true","sticky_mobile_behavior":"default","ajax_loader":"<div class=\"loader-overlay\"><div class=\"spinner-circle\"><\/div><\/div>","type_to_search":"","lang_no_results":"Kh\u00f4ng c\u00f3 k\u1ebft qu\u1ea3","sticky_share_mobile":"true","sticky_share_post":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/themes/jannah/assets/js/scripts.min.js?ver=6.2.1" id="tie-scripts-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/themes/jannah/assets/ilightbox/lightbox.js?ver=6.2.1" id="tie-js-ilightbox-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/themes/jannah/assets/js/desktop.min.js?ver=6.2.1" id="tie-js-desktop-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/themes/jannah/assets/js/live-search.js?ver=6.2.1" id="tie-js-livesearch-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-content/themes/jannah/assets/js/single.min.js?ver=6.2.1" id="tie-js-single-js"></script>
+<script type="text/javascript" src="https://teky.edu.vn/blog/wp-includes/js/comment-reply.min.js?ver=6.8.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+
+</body>
+</html>
